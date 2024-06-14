@@ -1,0 +1,48 @@
+const handleDownload = async () => {
+    setLoading(true);
+    console.log("started");
+    if (canvasRef.current === null) {
+      setLoading(false);
+      return;
+    }
+    try {
+      const canvas = await html2canvas(canvasRef.current, {
+        scale: 3, // Higher scale for better clarity
+        logging: false,
+        useCORS: true
+      });
+
+      const tempCanvas = document.createElement("canvas");
+      tempCanvas.width = 1080;
+      tempCanvas.height = 1080;
+
+      const ctx = tempCanvas.getContext("2d");
+
+      // Calculate scaling factor to fit the content into 1080x1080
+      const scaleWidth = 1080 / canvas.width;
+      const scaleHeight = 1080 / canvas.height;
+      const scaleFactor = Math.min(scaleWidth, scaleHeight);
+
+      // Calculate new dimensions based on scaling factor
+      const newWidth = canvas.width * scaleFactor;
+      const newHeight = canvas.height * scaleFactor;
+
+      // Center the scaled image on the canvas
+      const xOffset = (1080 - newWidth) / 2;
+      const yOffset = (1080 - newHeight) / 2;
+
+      // Draw the original canvas onto the temporary canvas with scaling
+      ctx.drawImage(canvas, xOffset, yOffset, newWidth, newHeight);
+
+      const dataUrl = tempCanvas.toDataURL("image/png", 1.0);
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = "unleash-post.png";
+      link.click();
+    } catch (error) {
+      console.log(error.message);
+      setLoading(false);
+    } finally {
+      setLoading(false);
+    }
+  };

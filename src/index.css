@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  body {
+    @apply font-karla;
+  }
+
+  .bg-dots {
+    position: relative;
+    background-color: #111111;
+    background-image: url("/images/dots.svg");
+    background-attachment: fixed;
+    background-size: 12rem;
+    z-index: 1;
+  }
+
+  .bg-dots::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.85;
+    z-index: -1;
+  }
+}
