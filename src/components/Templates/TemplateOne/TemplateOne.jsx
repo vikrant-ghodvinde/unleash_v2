@@ -1,13 +1,17 @@
 import { GetContext } from "@/libs/context/context";
 import { useSelector } from "react-redux";
-import { contentSizeDesktop, contentSizeMobile } from "./helpers";
+import {
+  contentSizeDesktop,
+  contentSizeMobile,
+  textAlignment,
+} from "./helpers";
 import { useMediaQuery } from "@mui/material";
 
 const TemplateOne = () => {
   const { profileName, userName, postContent } = GetContext();
   const { contentSize } = useSelector((state) => state.fontSize);
-  console.log(contentSize);
-  console.log(contentSizeDesktop(contentSize));
+  const { alignment } = useSelector((state) => state.textAlignment);
+
   const isDesktop = useMediaQuery("(min-width:640px)");
   return (
     <div className="w-full bg-white rounded-md p-3">
@@ -49,6 +53,7 @@ const TemplateOne = () => {
             fontSize: isDesktop
               ? contentSizeDesktop(contentSize)
               : contentSizeMobile(contentSize),
+            textAlign: textAlignment(alignment),
           }}
         >
           {postContent}

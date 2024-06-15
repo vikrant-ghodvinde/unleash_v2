@@ -12,7 +12,6 @@ const FontSize = () => {
   const { contentSize } = useSelector((state) => state.fontSize);
 
   const handleFontChange = (size) => {
-    console.log(size);
     dispatch(
       setFontSize({
         contentSize: size,
@@ -33,7 +32,9 @@ const FontSize = () => {
         <button
           type="button"
           title="Extra Small"
-          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${contentSize === "extra-small" ? "bg-zinc-900" : "bg-transparent"}`}
+          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
+            contentSize === "extra-small" ? "bg-zinc-900" : "bg-transparent"
+          }`}
           onClick={() => handleFontChange("extra-small")}
         >
           <FontSizeIcon width={10} />
@@ -41,7 +42,9 @@ const FontSize = () => {
         <button
           type="button"
           title="Small"
-          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${contentSize === "small" ? "bg-zinc-900" : "bg-transparent"}`}
+          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
+            contentSize === "small" ? "bg-zinc-900" : "bg-transparent"
+          }`}
           onClick={() => handleFontChange("small")}
         >
           <FontSizeIcon width={12} />
@@ -49,7 +52,9 @@ const FontSize = () => {
         <button
           type="button"
           title="Medium"
-          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${contentSize === "medium" ? "bg-zinc-900" : "bg-transparent"}`}
+          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
+            contentSize === "medium" ? "bg-zinc-900" : "bg-transparent"
+          }`}
           onClick={() => handleFontChange("medium")}
         >
           <FontSizeIcon width={14} />
@@ -57,7 +62,9 @@ const FontSize = () => {
         <button
           type="button"
           title="Bold"
-          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${contentSize === "large" ? "bg-zinc-900" : "bg-transparent"}`}
+          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
+            contentSize === "large" ? "bg-zinc-900" : "bg-transparent"
+          }`}
           onClick={() => handleFontChange("large")}
         >
           <FontSizeIcon width={16} />
@@ -65,7 +72,9 @@ const FontSize = () => {
         <button
           type="button"
           title="Extra Bold"
-          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${contentSize === "extra-large" ? "bg-zinc-900" : "bg-transparent"}`}
+          className={`text-[10px] w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
+            contentSize === "extra-large" ? "bg-zinc-900" : "bg-transparent"
+          }`}
           onClick={() => handleFontChange("extra-large")}
         >
           <FontSizeIcon width={18} />

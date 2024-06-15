@@ -41,3 +41,22 @@ export const contentSizeMobile = (size) => {
       return "14px";
   }
 };
+
+export const textAlignment = (align) => {
+  switch (align) {
+    case "left":
+      return "left";
+
+    case "center":
+      return "center";
+
+    case "right":
+      return "right";
+
+    case "justify":
+      return "justify";
+
+    default:
+      return "left";
+  }
+};

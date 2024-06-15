@@ -11,10 +11,12 @@ import {
 import storage from "redux-persist/lib/storage";
 import colorsReducer from "../reducers/colorsReducer";
 import fontSizeReducer from "../reducers/fontSizeReducer";
+import textAlignReducer from "../reducers/textAlignReducer";
 
 const reducers = combineReducers({
   colors: colorsReducer,
   fontSize: fontSizeReducer,
+  textAlignment: textAlignReducer,
 });
 
 const persistConfig = { key: "root", storage, version: 1 };
