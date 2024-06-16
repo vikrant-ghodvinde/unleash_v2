@@ -18,14 +18,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/ui/shadcn/components/ui/select";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const Colors = () => {
   const dispatch = useDispatch();
   const { primaryBackground, secondaryBackground, backgroundType } =
     useSelector((state) => state.backgrounds);
-  const [swapColors, setSwapColors] = useState(false);
 
   const handleBackgroundType = (type) => {
     dispatch(
@@ -57,7 +55,9 @@ const Colors = () => {
                     <SelectValue placeholder="Select Type" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="solidColor" className="text-xs">Solid Color</SelectItem>
+                    <SelectItem value="solidColor" className="text-xs">
+                      Solid Color
+                    </SelectItem>
                     <SelectItem value="linearGradient" className="text-xs">
                       Linear Gradient
                     </SelectItem>
