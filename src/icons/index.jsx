@@ -1,5 +1,13 @@
 import FeatherIcon from "feather-icons-react";
-import { AlignCenter, AlignJustify, AlignLeft, AlignRight, ColorFilter, Text, TextSize } from "iconoir-react";
+import {
+  AlignCenter,
+  AlignJustify,
+  AlignLeft,
+  AlignRight,
+  ColorFilter,
+  Text,
+  TextSize,
+} from "iconoir-react";
 
 export const HeartIcon = (props) => {
   return <FeatherIcon icon="heart" {...props} />;
@@ -47,4 +55,8 @@ export const EmojiIcon = (props) => {
 
 export const ColorIcon = (props) => {
   return <ColorFilter {...props} />;
+};
+
+export const SwapIcon = (props) => {
+  return <FeatherIcon icon="refresh-cw" {...props} />;
 };

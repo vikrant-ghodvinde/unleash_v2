@@ -1,5 +1,11 @@
 import ColorPicker from "@/components/ColorPicker/ColorPicker";
-import { ColorIcon } from "@/icons";
+import { ColorIcon, SwapIcon } from "@/icons";
+import {
+  setBackgroundType,
+  setPrimaryBackground,
+  setSecondaryBackground,
+  setSwapGradient,
+} from "@/libs/redux/reducers/backgroundsReducer";
 import {
   Popover,
   PopoverContent,
@@ -13,10 +19,21 @@ import {
   SelectValue,
 } from "@/ui/shadcn/components/ui/select";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const Colors = () => {
-  const [textColor, setTextColor] = useState("#4B5563");
-  const [colorType, setColorType] = useState("");
+  const dispatch = useDispatch();
+  const { primaryBackground, secondaryBackground, backgroundType } =
+    useSelector((state) => state.backgrounds);
+  const [swapColors, setSwapColors] = useState(false);
+
+  const handleBackgroundType = (type) => {
+    dispatch(
+      setBackgroundType({
+        backgroundType: type,
+      })
+    );
+  };
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -28,20 +45,23 @@ const Colors = () => {
         </button>
       </PopoverTrigger>
       <PopoverContent>
-        <div className="grid grid-cols-12 w-64">
+        <div className="grid grid-cols-12">
           <div className="relative col-span-12 p-1">
-            <div className="w-full h-10 flex items-center justify-between">
-              <div className="flex-1">
-                <Select onValueChange={setColorType}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Theme" />
+            <div className="w-full h-10 flex items-center justify-between gap-1">
+              <div className="relative">
+                <Select
+                  value={backgroundType}
+                  onValueChange={(type) => handleBackgroundType(type)}
+                >
+                  <SelectTrigger className="text-xs">
+                    <SelectValue placeholder="Select Type" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="solidColor">Solid Color</SelectItem>
-                    <SelectItem value="linearGradient">
+                    <SelectItem value="solidColor" className="text-xs">Solid Color</SelectItem>
+                    <SelectItem value="linearGradient" className="text-xs">
                       Linear Gradient
                     </SelectItem>
-                    <SelectItem value="radialGradient">
+                    <SelectItem value="radialGradient" className="text-xs">
                       Radial Gradient
                     </SelectItem>
                   </SelectContent>
@@ -54,15 +74,62 @@ const Colors = () => {
                       type="button"
                       className="w-10 h-10 rounded-md"
                       style={{
-                        background: textColor,
+                        background: primaryBackground,
                       }}
                     ></button>
                   </PopoverTrigger>
                   <PopoverContent>
-                    <ColorPicker color={textColor} setColor={setTextColor} />
+                    <ColorPicker
+                      color={primaryBackground}
+                      setColor={(color) =>
+                        dispatch(
+                          setPrimaryBackground({
+                            primaryBackground: color,
+                          })
+                        )
+                      }
+                    />
                   </PopoverContent>
                 </Popover>
               </div>
+              {backgroundType !== "solidColor" && (
+                <div className="flex items-center justify-center">
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <button
+                        type="button"
+                        className="w-10 h-10 rounded-md"
+                        style={{
+                          background: secondaryBackground,
+                        }}
+                      ></button>
+                    </PopoverTrigger>
+                    <PopoverContent>
+                      <ColorPicker
+                        color={secondaryBackground}
+                        setColor={(color) =>
+                          dispatch(
+                            setSecondaryBackground({
+                              secondaryBackground: color,
+                            })
+                          )
+                        }
+                      />
+                    </PopoverContent>
+                  </Popover>
+                </div>
+              )}
+              {backgroundType !== "solidColor" && (
+                <div className="flex items-center justify-center">
+                  <button
+                    type="button"
+                    className="w-10 h-10 rounded-md inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900"
+                    onClick={() => dispatch(setSwapGradient())}
+                  >
+                    <SwapIcon width={16} />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
