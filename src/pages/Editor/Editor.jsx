@@ -35,7 +35,7 @@ const Editor = () => {
   };
   return (
     <section className="relative bg-dots">
-      <div className="w-full min-h-screen px-2 flex flex-col items-center justify-center overflow-x-auto">
+      <div className="w-full min-h-screen px-1 sm:px-3 flex flex-col items-center justify-center overflow-x-auto">
         <EditorCard canvasRef={canvasRef} loading={loading} />
         <div className="mt-20">
           <Button variant="outline" onClick={handleDownload}>
