@@ -8,18 +8,54 @@ import {
 import { useMediaQuery } from "@mui/material";
 
 const TemplateOne = () => {
-  const { profileName, userName, postContent } = GetContext();
+  const {
+    userImage,
+    setUserImage,
+    profileName,
+    userName,
+    postContent,
+    setPostContent,
+  } = GetContext();
   const { contentSize } = useSelector((state) => state.fontSize);
   const { alignment } = useSelector((state) => state.textAlignment);
 
   const isDesktop = useMediaQuery("(min-width:640px)");
+
+  const handleUserImage = (e) => {
+    const image = e.target.files[0];
+    console.log(image);
+    if (image) {
+      const imageUrl = URL.createObjectURL(image);
+      setUserImage(imageUrl);
+      console.log(imageUrl);
+    } else {
+      console.error("No file selected");
+    }
+  };
+
   return (
-    <div className="w-full bg-white rounded-md p-3">
+    <div className="w-full bg-white rounded-md p-3 outline-none">
       <div className="grid grid-cols-1 gap-y-3">
         <div className="relative w-full flex items-center justify-between gap-x-2">
           <div className="flex items-center gap-x-2">
-            <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gray-800"></div>
-            <div className="relative">
+            <div
+              className="relative w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gray-800 overflow-hidden"
+              title="Click to upload image"
+            >
+              {userImage && (
+                <img src={userImage} alt="" className="w-full h-full" />
+              )}
+              <input
+                type="file"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 cursor-pointer"
+                onChange={handleUserImage}
+              />
+            </div>
+            <div
+              className="relative outline-none"
+              contentEditable
+              suppressContentEditableWarning
+            >
               <h6 className="text-xs font-bold leading-tight">{profileName}</h6>
               <p className="text-[10px]">{userName}</p>
             </div>
@@ -48,13 +84,16 @@ const TemplateOne = () => {
           </div>
         </div>
         <div
-          className="relative w-full"
+          className="relative w-full outline-none"
+          contentEditable
+          suppressContentEditableWarning
           style={{
             fontSize: isDesktop
               ? contentSizeDesktop(contentSize)
               : contentSizeMobile(contentSize),
             textAlign: textAlignment(alignment),
           }}
+          onInput={(e) => setPostContent(e.target.value)}
         >
           {postContent}
         </div>
