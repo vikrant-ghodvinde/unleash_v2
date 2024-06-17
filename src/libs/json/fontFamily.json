@@ -1,0 +1,18 @@
+[
+  { "name": "Playfair Display", "font": "'Playfair Display', serif" },
+  { "name": "Lora", "font": "'Lora', serif" },
+  { "name": "PT Serif", "font": "'PT Serif', serif" },
+  { "name": "Bitter", "font": "'Bitter', serif" },
+  { "name": "Arvo", "font": "'Arvo', slab-serif" },
+  { "name": "Rokkitt", "font": "'Rokkitt', slab-serif" },
+  { "name": "Roboto Slab", "font": "'Roboto Slab', slab-serif" },
+  { "name": "Glegoo", "font": "'Glegoo', slab-serif" },
+  { "name": "Slabo 27px", "font": "'Slabo 27px', slab-serif" },
+  { "name": "Roboto Condensed", "font": "'Roboto Condensed', sans-serif" },
+  { "name": "Proza Libre", "font": "'Proza Libre', sans-serif" },
+  { "name": "Work Sans", "font": "'Work Sans', sans-serif" },
+  { "name": "Oswald", "font": "'Oswald', sans-serif" },
+  { "name": "Roboto Flex", "font": "'Roboto Flex', sans-serif" },
+  { "name": "Abel", "font": "'Abel', sans-serif" },
+  { "name": "Quicksand", "font": "'Quicksand', sans-serif" }
+]

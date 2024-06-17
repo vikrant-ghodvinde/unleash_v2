@@ -18,6 +18,13 @@ const TemplateOne = () => {
   } = GetContext();
   const { contentSize } = useSelector((state) => state.fontSize);
   const { alignment } = useSelector((state) => state.textAlignment);
+  const {
+    primaryFontFamily,
+    primaryFontWeight,
+    secondaryFontFamily,
+    secondaryFontWeight,
+  } = useSelector((state) => state.fontStyle);
+  const { primaryColor, secondaryColor } = useSelector((state) => state.colors);
 
   const isDesktop = useMediaQuery("(min-width:640px)");
 
@@ -56,8 +63,25 @@ const TemplateOne = () => {
               contentEditable
               suppressContentEditableWarning
             >
-              <h6 className="text-xs font-bold leading-tight">{profileName}</h6>
-              <p className="text-[10px]">{userName}</p>
+              <h6
+                className="text-xs leading-tight"
+                style={{
+                  fontFamily: secondaryFontFamily,
+                  fontWeight: secondaryFontWeight,
+                  color: secondaryColor,
+                }}
+              >
+                {profileName}
+              </h6>
+              <p
+                className="text-[10px]"
+                style={{
+                  fontFamily: secondaryFontFamily,
+                  color: secondaryColor,
+                }}
+              >
+                {userName}
+              </p>
             </div>
           </div>
           <div className="inline-flex items-center">
@@ -92,6 +116,9 @@ const TemplateOne = () => {
               ? contentSizeDesktop(contentSize)
               : contentSizeMobile(contentSize),
             textAlign: textAlignment(alignment),
+            fontFamily: primaryFontFamily,
+            fontWeight: primaryFontWeight,
+            color: primaryColor,
           }}
           onInput={(e) => setPostContent(e.target.value)}
         >

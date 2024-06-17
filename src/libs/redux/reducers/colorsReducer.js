@@ -4,17 +4,22 @@ export const colorSlice = createSlice({
   name: "colors",
   initialState: {
     primaryColor: "#000",
-    secondaryColor: "",
-    highlightColor: "",
+    secondaryColor: "#000",
+    highlightColor: "#000",
   },
   reducers: {
-    setColors: (state, action) => {
+    setPrimaryColor: (state, action) => {
       state.primaryColor = action.payload.primaryColor;
+    },
+    setSecondaryColor: (state, action) => {
       state.secondaryColor = action.payload.secondaryColor;
+    },
+    setHighlightColor: (state, action) => {
       state.highlightColor = action.payload.highlightColor;
     },
   },
 });
 
-export const { setColors } = colorSlice.actions;
+export const { setPrimaryColor, setSecondaryColor, setHighlightColor } =
+  colorSlice.actions;
 export default colorSlice.reducer;

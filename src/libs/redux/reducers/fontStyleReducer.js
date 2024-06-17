@@ -3,10 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const fontStyleSlice = createSlice({
   name: "fontStyle",
   initialState: {
-    primaryFontFamily: "",
-    primaryFontWeight: "",
-    secondaryFontFamily: "",
-    secondaryFontWeight: "",
+    primaryFontFamily: "'Playfair Display', serif",
+    primaryFontWeight: "400",
+    secondaryFontFamily: "'PT Serif', serif",
+    secondaryFontWeight: "700",
   },
   reducers: {
     setPrimaryFontFamily: (state, action) => {

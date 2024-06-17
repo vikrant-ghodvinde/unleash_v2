@@ -60,3 +60,7 @@ export const ColorIcon = (props) => {
 export const SwapIcon = (props) => {
   return <FeatherIcon icon="refresh-cw" {...props} />;
 };
+
+export const DownloadIcon = (props) => {
+  return <FeatherIcon icon="download" {...props} />;
+};

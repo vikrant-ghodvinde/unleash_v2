@@ -1,6 +1,16 @@
 import ColorPicker from "@/components/ColorPicker/ColorPicker";
 import { FontsIcon } from "@/icons";
 import {
+  setPrimaryColor,
+  setSecondaryColor,
+} from "@/libs/redux/reducers/colorsReducer";
+import {
+  setPrimaryFontFamily,
+  setPrimaryFontWeight,
+  setSecondaryFontFamily,
+  setSecondaryFontWeight,
+} from "@/libs/redux/reducers/fontStyleReducer";
+import {
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -12,8 +22,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/ui/shadcn/components/ui/select";
+import { useDispatch, useSelector } from "react-redux";
+import fontFamilies from "@/libs/json/fontFamily.json";
 
 const Fonts = () => {
+  const dispatch = useDispatch();
+  const {
+    primaryFontFamily,
+    primaryFontWeight,
+    secondaryFontFamily,
+    secondaryFontWeight,
+  } = useSelector((state) => state.fontStyle);
+
+  const { primaryColor, secondaryColor } = useSelector((state) => state.colors);
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -33,44 +54,62 @@ const Fonts = () => {
               </div>
               <div className="relative">
                 <Select
-                // value={backgroundType}
-                // onValueChange={(type) => handleBackgroundType(type)}
+                  value={primaryFontFamily}
+                  onValueChange={(font) =>
+                    dispatch(
+                      setPrimaryFontFamily({
+                        primaryFontFamily: font,
+                      })
+                    )
+                  }
                 >
                   <SelectTrigger className="text-xs w-32">
-                    <SelectValue placeholder="Select Type" />
+                    <SelectValue placeholder="Select Font" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="solidColor" className="text-xs">
-                      Solid Color
-                    </SelectItem>
+                    {fontFamilies?.map((font) => (
+                      <SelectItem
+                        key={font?.name}
+                        value={font.font}
+                        className="text-xs"
+                      >
+                        {font?.name}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
               <div className="relative">
                 <Select
-                // value={backgroundType}
-                // onValueChange={(type) => handleBackgroundType(type)}
+                  value={primaryFontWeight}
+                  onValueChange={(weight) =>
+                    dispatch(
+                      setPrimaryFontWeight({
+                        primaryFontWeight: weight,
+                      })
+                    )
+                  }
                 >
-                  <SelectTrigger className="text-xs w-32">
-                    <SelectValue placeholder="Select Type" />
+                  <SelectTrigger className="text-xs w-28">
+                    <SelectValue placeholder="Select Font Weight" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="light" className="text-xs">
+                    <SelectItem value="300" className="text-xs">
                       Light
                     </SelectItem>
-                    <SelectItem value="regular" className="text-xs">
+                    <SelectItem value="400" className="text-xs">
                       Regular
                     </SelectItem>
-                    <SelectItem value="medium" className="text-xs">
+                    <SelectItem value="500" className="text-xs">
                       Medium
                     </SelectItem>
-                    <SelectItem value="semi-bold" className="text-xs">
+                    <SelectItem value="600" className="text-xs">
                       Semi Bold
                     </SelectItem>
-                    <SelectItem value="bold" className="text-xs">
+                    <SelectItem value="700" className="text-xs">
                       Bold
                     </SelectItem>
-                    <SelectItem value="extra-bold" className="text-xs">
+                    <SelectItem value="800" className="text-xs">
                       Extra Bold
                     </SelectItem>
                   </SelectContent>
@@ -82,27 +121,28 @@ const Fonts = () => {
                     <button
                       type="button"
                       className="w-10 h-10 rounded-md bg-slate-500"
-                      // style={{
-                      //   background: primaryBackground,
-                      // }}
+                      style={{
+                        background: primaryColor,
+                      }}
                     ></button>
                   </PopoverTrigger>
                   <PopoverContent>
                     <ColorPicker
-                    // color={primaryBackground}
-                    // setColor={(color) =>
-                    //   dispatch(
-                    //     setPrimaryBackground({
-                    //       primaryBackground: color,
-                    //     })
-                    //   )
-                    // }
+                      color={primaryColor}
+                      setColor={(color) =>
+                        dispatch(
+                          setPrimaryColor({
+                            primaryColor: color,
+                          })
+                        )
+                      }
                     />
                   </PopoverContent>
                 </Popover>
               </div>
             </div>
           </div>
+
           <div className="relative col-span-12 p-1">
             <div className="w-full h-10 flex items-center justify-between gap-1">
               <div className="w-10 h-10 inline-flex items-center justify-center">
@@ -110,44 +150,62 @@ const Fonts = () => {
               </div>
               <div className="relative">
                 <Select
-                // value={backgroundType}
-                // onValueChange={(type) => handleBackgroundType(type)}
+                  value={secondaryFontFamily}
+                  onValueChange={(font) =>
+                    dispatch(
+                      setSecondaryFontFamily({
+                        secondaryFontFamily: font,
+                      })
+                    )
+                  }
                 >
                   <SelectTrigger className="text-xs w-32">
-                    <SelectValue placeholder="Select Type" />
+                    <SelectValue placeholder="Select Font" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="solidColor" className="text-xs">
-                      Solid Color
-                    </SelectItem>
+                    {fontFamilies?.map((font) => (
+                      <SelectItem
+                        key={font?.name}
+                        value={font.font}
+                        className="text-xs"
+                      >
+                        {font?.name}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
               <div className="relative">
                 <Select
-                // value={backgroundType}
-                // onValueChange={(type) => handleBackgroundType(type)}
+                  value={secondaryFontWeight}
+                  onValueChange={(weight) =>
+                    dispatch(
+                      setSecondaryFontWeight({
+                        secondaryFontWeight: weight,
+                      })
+                    )
+                  }
                 >
-                  <SelectTrigger className="text-xs w-32">
-                    <SelectValue placeholder="Select Type" />
+                  <SelectTrigger className="text-xs w-28">
+                    <SelectValue placeholder="Select Font Weight" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="light" className="text-xs">
+                    <SelectItem value="300" className="text-xs">
                       Light
                     </SelectItem>
-                    <SelectItem value="regular" className="text-xs">
+                    <SelectItem value="400" className="text-xs">
                       Regular
                     </SelectItem>
-                    <SelectItem value="medium" className="text-xs">
+                    <SelectItem value="500" className="text-xs">
                       Medium
                     </SelectItem>
-                    <SelectItem value="semi-bold" className="text-xs">
+                    <SelectItem value="600" className="text-xs">
                       Semi Bold
                     </SelectItem>
-                    <SelectItem value="bold" className="text-xs">
+                    <SelectItem value="700" className="text-xs">
                       Bold
                     </SelectItem>
-                    <SelectItem value="extra-bold" className="text-xs">
+                    <SelectItem value="800" className="text-xs">
                       Extra Bold
                     </SelectItem>
                   </SelectContent>
@@ -159,21 +217,21 @@ const Fonts = () => {
                     <button
                       type="button"
                       className="w-10 h-10 rounded-md bg-slate-500"
-                      // style={{
-                      //   background: primaryBackground,
-                      // }}
+                      style={{
+                        background: secondaryColor,
+                      }}
                     ></button>
                   </PopoverTrigger>
                   <PopoverContent>
                     <ColorPicker
-                    // color={primaryBackground}
-                    // setColor={(color) =>
-                    //   dispatch(
-                    //     setPrimaryBackground({
-                    //       primaryBackground: color,
-                    //     })
-                    //   )
-                    // }
+                      color={secondaryColor}
+                      setColor={(color) =>
+                        dispatch(
+                          setSecondaryColor({
+                            secondaryColor: color,
+                          })
+                        )
+                      }
                     />
                   </PopoverContent>
                 </Popover>
