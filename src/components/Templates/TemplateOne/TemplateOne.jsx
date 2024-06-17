@@ -64,22 +64,22 @@ const TemplateOne = () => {
             <img
               src="/images/social/facebook.png"
               alt=""
-              className="w-5 h-5 -ms-2.5"
+              className="w-4 sm:w-5 h-4 sm:h-5 -ms-2.5"
             />
             <img
               src="/images/social/instagram.png"
               alt=""
-              className="w-5 h-5 -ms-2.5"
+              className="w-4 sm:w-5 h-4 sm:h-5 -ms-2.5"
             />
             <img
               src="/images/social/twitter.png"
               alt=""
-              className="w-5 h-5 -ms-2.5"
+              className="w-4 sm:w-5 h-4 sm:h-5 -ms-2.5"
             />
             <img
               src="/images/social/linkedin.png"
               alt=""
-              className="w-5 h-5 -ms-2.5"
+              className="w-4 sm:w-5 h-4 sm:h-5 -ms-2.5"
             />
           </div>
         </div>
