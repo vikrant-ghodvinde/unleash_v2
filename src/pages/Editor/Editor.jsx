@@ -23,7 +23,7 @@ const Editor = () => {
         logging: false,
         useCORS: true,
       }).then((canvas) => {
-        const dataUrl = canvas.toDataURL("image/png");
+        const dataUrl = canvas.toDataURL("image/png", 1);
         const link = document.createElement("a");
         link.href = dataUrl;
         link.download = "unleash-post.png";

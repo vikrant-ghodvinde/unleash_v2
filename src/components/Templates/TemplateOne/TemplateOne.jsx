@@ -60,17 +60,17 @@ const TemplateOne = () => {
         </div>
         {/* <div className="relative w-full">
           <div className="flex items-center gap-x-3">
-            <div className="text-sm inline-flex items-center">
+            <div className="text-sm inline-flex items-center gap-x-1">
               <HeartIcon width={14} height={14} />
               <p>13.5k</p>
             </div>
-            <div className="text-sm inline-flex items-center">
+            <div className="text-sm inline-flex items-center gap-x-1">
               <span>
                 <CommentIcon width={14} height={14} />
               </span>{" "}
               <p>1.5k</p>
             </div>
-            <div className="text-sm inline-flex items-center">
+            <div className="text-sm inline-flex items-center gap-x-1">
               <ShareIcon width={14} height={14} />
               <p>1.1k</p>
             </div>
