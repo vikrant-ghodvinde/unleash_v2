@@ -6,6 +6,7 @@ const backgroundSlice = createSlice({
     primaryBackground: "#4B5563",
     secondaryBackground: "#4B5563",
     imageBackground: "",
+    backgroundImageOpacity: [0.2],
     backgroundType: "solidColor",
     swapGradient: false,
   },
@@ -22,6 +23,9 @@ const backgroundSlice = createSlice({
     setImageBackground: (state, action) => {
       state.imageBackground = action.payload.imageBackground;
     },
+    setBackgroundImageOpacity: (state, action) => {
+      state.backgroundImageOpacity = action.payload.backgroundImageOpacity;
+    },
     setBackgroundType: (state, action) => {
       state.backgroundType = action.payload.backgroundType;
     },
@@ -32,6 +36,7 @@ export const {
   setPrimaryBackground,
   setSecondaryBackground,
   setImageBackground,
+  setBackgroundImageOpacity,
   setBackgroundType,
   setSwapGradient,
 } = backgroundSlice.actions;

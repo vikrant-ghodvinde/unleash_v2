@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from "react";
 const AppContext = createContext();
 
 export const ContextProvider = ({ children }) => {
-  const [userImage, setUserImage] = useState("");
+  const [userImage, setUserImage] = useState("/images/icons/user.jpg");
   const [profileName, setProfileName] = useState("John Doe");
   const [userName, setUserName] = useState("john_027");
   const [socialMedia, setSocialMedia] = useState(["twitter"]);

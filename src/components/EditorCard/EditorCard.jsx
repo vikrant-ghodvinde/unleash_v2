@@ -15,12 +15,16 @@ const EditorCard = ({ canvasRef, loading }) => {
     secondaryBackground,
     swapGradient,
     backgroundType,
+    imageBackground,
+    backgroundImageOpacity,
   } = useSelector((state) => state.backgrounds);
+
+  // console.log(backgroundImageOpacity[0]);
   return (
     <div
       role="button"
       ref={canvasRef}
-      className="shrink-0 relative group w-[22rem] sm:w-[30rem] aspect-square flex items-center justify-center p-5 sm:p-10 outline-none"
+      className="shrink-0 relative group w-[22rem] sm:w-[30rem] aspect-square flex items-center justify-center p-5 sm:p-10 outline-none z-10"
       style={{
         background: backgroundConfiguration(
           backgroundType,
@@ -30,8 +34,16 @@ const EditorCard = ({ canvasRef, loading }) => {
         ),
       }}
     >
-      {/* EXPORT POST */}
-      {/* <div className="absolute -top-10 left-0 transition-opacity opacity-0 group-hover:opacity-100"></div> */}
+      {/* IMAGE BACKGROUND */}
+      <div
+        className="absolute top-0 left-0 w-full h-full -z-10"
+        style={{
+          backgroundImage: `url(${imageBackground})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100%",
+          opacity: backgroundImageOpacity,
+        }}
+      ></div>
 
       {/* POST CARD */}
       <TemplateOne />

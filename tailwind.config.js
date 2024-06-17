@@ -40,6 +40,9 @@ module.exports = {
         "work-sans": ["work-sans", "sans-serif"],
         karla: ["karla", "sans-serif"],
       },
+      maxWidth: {
+        "1/2": "50%",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
