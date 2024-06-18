@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   RiBubbleChartLine,
   RiChat3Line,
@@ -27,113 +28,113 @@ import {
 } from "iconoir-react";
 
 export const HeartIcon = (props) => {
-  return <RiHeartLine {...props} />;
+  return <RiHeartLine height={props.width} {...props} />;
 };
 
 export const CommentIcon = (props) => {
-  return <RiChat3Line {...props} />;
+  return <RiChat3Line height={props.width} {...props} />;
 };
 
 export const ShareIcon = (props) => {
-  return <FeatherIcon icon="send" {...props} />;
+  return <FeatherIcon height={props.width} icon="send" {...props} />;
 };
 
 export const TextIcon = (props) => {
-  return <RiText {...props} />;
+  return <RiText height={props.width} {...props} />;
 };
 
 export const FontSizeIcon = (props) => {
-  return <RiFontSize2 {...props} />;
+  return <RiFontSize2 height={props.width} {...props} />;
 };
 
 export const AlignLeftIcon = (props) => {
-  return <AlignLeft {...props} />;
+  return <AlignLeft height={props.width} {...props} />;
 };
 
 export const AlignCenterIcon = (props) => {
-  return <AlignCenter {...props} />;
+  return <AlignCenter height={props.width} {...props} />;
 };
 
 export const AlignRightIcon = (props) => {
-  return <AlignRight {...props} />;
+  return <AlignRight height={props.width} {...props} />;
 };
 
 export const AlignJustifyIcon = (props) => {
-  return <AlignJustify {...props} />;
+  return <AlignJustify height={props.width} {...props} />;
 };
 
 export const FontsIcon = (props) => {
-  return <RiFontFamily {...props} />;
+  return <RiFontFamily height={props.width} {...props} />;
 };
 
 export const BackgroundIcon = (props) => {
-  return <FeatherIcon icon="image" {...props} />;
+  return <FeatherIcon height={props.width} icon="image" {...props} />;
 };
 
 export const EmojiIcon = (props) => {
-  return <FeatherIcon icon="smile" {...props} />;
+  return <FeatherIcon height={props.width} icon="smile" {...props} />;
 };
 
 export const ColorIcon = (props) => {
-  return <ColorFilter {...props} />;
+  return <ColorFilter height={props.width} {...props} />;
 };
 
 export const SwapIcon = (props) => {
-  return <FeatherIcon icon="refresh-cw" {...props} />;
+  return <FeatherIcon height={props.width} icon="refresh-cw" {...props} />;
 };
 
 export const DownloadIcon = (props) => {
-  return <FeatherIcon icon="download" {...props} />;
+  return <FeatherIcon height={props.width} icon="download" {...props} />;
 };
 
 export const UploadIcon = (props) => {
-  return <FeatherIcon icon="upload-cloud" {...props} />;
+  return <FeatherIcon height={props.width} icon="upload-cloud" {...props} />;
 };
 
 export const FacebookIcon = (props) => {
-  return <RiFacebookFill {...props} />;
+  return <RiFacebookFill height={props.width} {...props} />;
 };
 
 export const InstagramIcon = (props) => {
-  return <RiInstagramLine {...props} />;
+  return <RiInstagramLine height={props.width} {...props} />;
 };
 
 export const TwitterIcon = (props) => {
-  return <RiTwitterXLine {...props} />;
+  return <RiTwitterXLine height={props.width} {...props} />;
 };
 
 export const LinkedInIcon = (props) => {
-  return <RiLinkedinFill {...props} />;
+  return <RiLinkedinFill height={props.width} {...props} />;
 };
 
 export const VerifiedIcon = (props) => {
-  return <RiVerifiedBadgeFill {...props} />;
+  return <RiVerifiedBadgeFill height={props.width} {...props} />;
 };
 
 export const RoundedCornerIcon = (props) => {
-  return <RiRoundedCorner {...props} />;
+  return <RiRoundedCorner height={props.width} {...props} />;
 };
 
 export const SquareCornerIcon = (props) => {
-  return <RiSquareLine {...props} />;
+  return <RiSquareLine height={props.width} {...props} />;
 };
 
 export const UserImageIcon = (props) => {
-  return <RiImageAddLine {...props} />;
+  return <RiImageAddLine height={props.width} {...props} />;
 };
 
 export const UserDetailsIcon = (props) => {
-  return <RiIdCardLine {...props} />;
+  return <RiIdCardLine height={props.width} {...props} />;
 };
 
 export const BubbleChartIcon = (props) => {
-  return <RiBubbleChartLine {...props} />;
+  return <RiBubbleChartLine height={props.width} {...props} />;
 };
 
 export const TextSnippetIcon = (props) => {
-  return <RiTextSnippet {...props} />;
+  return <RiTextSnippet height={props.width} {...props} />;
 };
 
 export const TimeZoneIcon = (props) => {
-  return <RiTimeZoneLine {...props} />;
+  return <RiTimeZoneLine height={props.width} {...props} />;
 };

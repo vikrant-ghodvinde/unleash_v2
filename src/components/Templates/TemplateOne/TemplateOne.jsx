@@ -43,10 +43,7 @@ const TemplateOne = () => {
         <div className="relative w-full flex items-center justify-between gap-x-2">
           <div className="flex items-center gap-x-2">
             {userImage.visible && (
-              <div
-                className="relative w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gray-800 overflow-hidden"
-                title="Click to upload image"
-              >
+              <div className="relative w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gray-800 overflow-hidden">
                 {userImage.image ? (
                   <img src={userImage.image} alt="" className="w-full h-full" />
                 ) : (
@@ -56,9 +53,9 @@ const TemplateOne = () => {
                 )}
               </div>
             )}
-            <div className="relative outline-none">
+            <div className="relative">
               <h6
-                className="text-xs leading-tight inline-flex items-center gap-x-1"
+                className="text-[10px] sm:text-xs flex items-center gap-x-1"
                 style={{
                   fontFamily: secondaryFontFamily,
                   fontWeight: secondaryFontWeight,
@@ -67,12 +64,12 @@ const TemplateOne = () => {
               >
                 {profileName.text}
                 {profileName.verified && (
-                  <VerifiedIcon width={14} color="#1EA1F3" />
+                  <VerifiedIcon width={14} height={14} color="#1EA1F3" />
                 )}
               </h6>
               {userName.visible && (
                 <p
-                  className="text-[10px]"
+                  className="text-[8px] sm:text-[10px]"
                   style={{
                     fontFamily: secondaryFontFamily,
                     color: secondaryColor,
