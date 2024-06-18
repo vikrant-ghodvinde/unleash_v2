@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum dolores praesentium? Reiciendis voluptatibus eaque soluta omnis saepe deleniti hic non deserunt provident. Voluptate nulla quisquam sunt magnam quas! Dolore!"
   );
   const [postCounts, setPostCounts] = useState({
-    visible: true,
+    visible: false,
     likes: "0",
     replies: "0",
     shares: "0",
