@@ -8,6 +8,8 @@ import Backgrounds from "./components/Backgrounds";
 import Colors from "./components/Colors";
 import { useSelector } from "react-redux";
 import { backgroundConfiguration } from "./helper";
+import Content from "./components/Content";
+import CardCorners from "./components/CardCorners";
 
 const EditorCard = ({ canvasRef, loading }) => {
   const {
@@ -51,11 +53,13 @@ const EditorCard = ({ canvasRef, loading }) => {
       {/* CONFIGURATIONS */}
       <div className="absolute bottom-0 inset-x-0 translate-y-full flex transition-all opacity-100 group-hover:opacity-100">
         <div className="flex items-center bg-zinc-800">
+          <Content />
           <FontSize />
           <Alignment />
           <Fonts />
           <Backgrounds />
           <Colors />
+          <CardCorners />
         </div>
       </div>
     </div>

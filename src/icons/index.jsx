@@ -1,3 +1,17 @@
+import {
+  RiChat3Line,
+  RiFacebookFill,
+  RiFontFamily,
+  RiFontSize2,
+  RiHeartLine,
+  RiInstagramLine,
+  RiLinkedinFill,
+  RiRoundedCorner,
+  RiSquareLine,
+  RiText,
+  RiTwitterXLine,
+  RiVerifiedBadgeFill,
+} from "@remixicon/react";
 import FeatherIcon from "feather-icons-react";
 import {
   AlignCenter,
@@ -5,24 +19,26 @@ import {
   AlignLeft,
   AlignRight,
   ColorFilter,
-  Text,
-  TextSize,
 } from "iconoir-react";
 
 export const HeartIcon = (props) => {
-  return <FeatherIcon icon="heart" {...props} />;
+  return <RiHeartLine {...props} />;
 };
 
 export const CommentIcon = (props) => {
-  return <FeatherIcon icon="message-circle" {...props} />;
+  return <RiChat3Line {...props} />;
 };
 
 export const ShareIcon = (props) => {
   return <FeatherIcon icon="send" {...props} />;
 };
 
+export const TextIcon = (props) => {
+  return <RiText {...props} />;
+};
+
 export const FontSizeIcon = (props) => {
-  return <TextSize {...props} />;
+  return <RiFontSize2 {...props} />;
 };
 
 export const AlignLeftIcon = (props) => {
@@ -42,7 +58,7 @@ export const AlignJustifyIcon = (props) => {
 };
 
 export const FontsIcon = (props) => {
-  return <Text {...props} />;
+  return <RiFontFamily {...props} />;
 };
 
 export const BackgroundIcon = (props) => {
@@ -63,4 +79,36 @@ export const SwapIcon = (props) => {
 
 export const DownloadIcon = (props) => {
   return <FeatherIcon icon="download" {...props} />;
+};
+
+export const UploadIcon = (props) => {
+  return <FeatherIcon icon="upload-cloud" {...props} />;
+};
+
+export const FacebookIcon = (props) => {
+  return <RiFacebookFill {...props} />;
+};
+
+export const InstagramIcon = (props) => {
+  return <RiInstagramLine {...props} />;
+};
+
+export const TwitterIcon = (props) => {
+  return <RiTwitterXLine {...props} />;
+};
+
+export const LinkedInIcon = (props) => {
+  return <RiLinkedinFill {...props} />;
+};
+
+export const VerifiedIcon = (props) => {
+  return <RiVerifiedBadgeFill {...props} />;
+};
+
+export const RoundedCornerIcon = (props) => {
+  return <RiRoundedCorner {...props} />;
+};
+
+export const SquareCornerIcon = (props) => {
+  return <RiSquareLine {...props} />;
 };

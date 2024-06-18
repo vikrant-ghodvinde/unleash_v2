@@ -13,6 +13,13 @@
     @apply font-karla;
   }
 
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield !important;
+  }
+
   img {
     @apply inline-block;
   }
@@ -37,44 +44,73 @@
     opacity: 0.85;
     z-index: -1;
   }
-}
 
-/* CHROME PICKER */
-.picker .react-colorful {
-  width: auto !important;
-  height: 160px;
-  gap: 6px;
-}
+  /* CHROME PICKER */
+  .picker .react-colorful {
+    width: auto !important;
+    height: 160px;
+    gap: 6px;
+  }
 
-.picker .react-colorful .react-colorful__saturation {
-  border-radius: 0 !important;
-  width: 170px !important;
-  border: 1px solid rgb(68 64 60) !important;
-}
+  .picker .react-colorful .react-colorful__saturation {
+    border-radius: 0 !important;
+    width: 170px !important;
+    border: 1px solid rgb(68 64 60) !important;
+  }
 
-.picker .react-colorful__pointer.react-colorful__saturation-pointer {
-  width: 16px !important;
-  height: 16px !important;
-  border-radius: 0 !important;
-}
+  .picker .react-colorful__pointer.react-colorful__saturation-pointer {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 0 !important;
+  }
 
-.picker .react-colorful__hue.react-colorful__last-control {
-  height: 16px !important;
-  border-radius: 0 !important;
-}
+  .picker .react-colorful__hue.react-colorful__last-control {
+    height: 16px !important;
+    border-radius: 0 !important;
+  }
 
-.picker .react-colorful__pointer.react-colorful__hue-pointer {
-  width: 17px !important;
-  height: 17px !important;
-  border-radius: 0 !important;
-}
+  .picker .react-colorful__pointer.react-colorful__hue-pointer {
+    width: 17px !important;
+    height: 17px !important;
+    border-radius: 0 !important;
+  }
 
-.picker .color-input input {
-  width: 100%;
-  height: 38px;
-  padding: 8px;
-  font-size: 14px;
-  background-color: transparent;
-  outline: 0;
-  border-top: 1px solid rgb(68 64 60) !important;
+  .picker .color-input input {
+    width: 100%;
+    height: 38px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: transparent;
+    outline: 0;
+    border-top: 1px solid rgb(68 64 60) !important;
+  }
+
+  /* SCROLLBAR */
+  .scrollbar-y::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .scrollbar-y::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 30px;
+  }
+
+  .scrollbar-y::-webkit-scrollbar-thumb {
+    background: #6d757f;
+    border-radius: 30px;
+  }
+
+  .scrollbar-x::-webkit-scrollbar {
+    height: 2px;
+  }
+
+  .scrollbar-x::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 30px;
+  }
+
+  .scrollbar-x::-webkit-scrollbar-thumb {
+    background: #6d757f;
+    border-radius: 30px;
+  }
 }

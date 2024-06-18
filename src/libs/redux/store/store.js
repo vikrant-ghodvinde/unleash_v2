@@ -14,6 +14,7 @@ import fontSizeReducer from "../reducers/fontSizeReducer";
 import textAlignReducer from "../reducers/textAlignReducer";
 import backgroundsReducer from "../reducers/backgroundsReducer";
 import fontStyleReducer from "../reducers/fontStyleReducer";
+import cardCornersReducer from "../reducers/cardCornersReducer";
 
 const reducers = combineReducers({
   colors: colorsReducer,
@@ -21,6 +22,7 @@ const reducers = combineReducers({
   textAlignment: textAlignReducer,
   backgrounds: backgroundsReducer,
   fontStyle: fontStyleReducer,
+  cardCorners: cardCornersReducer,
 });
 
 const persistConfig = { key: "root", storage, version: 1 };
