@@ -106,29 +106,50 @@ const TemplateOne = () => {
             fontWeight: primaryFontWeight,
             color: primaryColor,
           }}
-          onInput={(e) => setPostContent(e.target.value)}
         >
           {postContent}
         </div>
         {timeStamp.visible && (
           <div className="relative w-full">
-            <p className="text-xs text-blue-600">{timeStamp.text}</p>
+            <p
+              className="text-[8px] sm:text-[9px] text-blue-600"
+              style={{
+                fontFamily: primaryFontFamily,
+              }}
+            >
+              {timeStamp.text}
+            </p>
           </div>
         )}
         {postCounts.visible && (
           <div className="relative w-full">
             <div className="flex items-center gap-x-3">
-              <div className="text-xs inline-flex items-center gap-x-1">
+              <div
+                className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5"
+                style={{
+                  fontFamily: primaryFontFamily,
+                }}
+              >
                 <HeartIcon width={14} height={14} />
                 <p>{postCountConfiguration(postCounts.likes)}</p>
               </div>
-              <div className="text-xs inline-flex items-center gap-x-1">
+              <div
+                className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5"
+                style={{
+                  fontFamily: primaryFontFamily,
+                }}
+              >
                 <span>
                   <CommentIcon width={14} height={14} />
                 </span>
                 <p>{postCountConfiguration(postCounts.replies)}</p>
               </div>
-              <div className="text-xs inline-flex items-center gap-x-1">
+              <div
+                className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5"
+                style={{
+                  fontFamily: primaryFontFamily,
+                }}
+              >
                 <ShareIcon width={14} height={14} />
                 <p>{postCountConfiguration(postCounts.shares)}</p>
               </div>
