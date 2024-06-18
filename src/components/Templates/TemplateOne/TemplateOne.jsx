@@ -16,7 +16,6 @@ const TemplateOne = () => {
     userName,
     socialMedia,
     postContent,
-    setPostContent,
     postCounts,
     timeStamp,
   } = GetContext();
