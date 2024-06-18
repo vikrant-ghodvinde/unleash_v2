@@ -1,14 +1,19 @@
 import {
+  RiBubbleChartLine,
   RiChat3Line,
   RiFacebookFill,
   RiFontFamily,
   RiFontSize2,
   RiHeartLine,
+  RiIdCardLine,
+  RiImageAddLine,
   RiInstagramLine,
   RiLinkedinFill,
   RiRoundedCorner,
   RiSquareLine,
   RiText,
+  RiTextSnippet,
+  RiTimeZoneLine,
   RiTwitterXLine,
   RiVerifiedBadgeFill,
 } from "@remixicon/react";
@@ -111,4 +116,24 @@ export const RoundedCornerIcon = (props) => {
 
 export const SquareCornerIcon = (props) => {
   return <RiSquareLine {...props} />;
+};
+
+export const UserImageIcon = (props) => {
+  return <RiImageAddLine {...props} />;
+};
+
+export const UserDetailsIcon = (props) => {
+  return <RiIdCardLine {...props} />;
+};
+
+export const BubbleChartIcon = (props) => {
+  return <RiBubbleChartLine {...props} />;
+};
+
+export const TextSnippetIcon = (props) => {
+  return <RiTextSnippet {...props} />;
+};
+
+export const TimeZoneIcon = (props) => {
+  return <RiTimeZoneLine {...props} />;
 };

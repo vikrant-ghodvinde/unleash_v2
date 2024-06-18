@@ -29,7 +29,7 @@ const CardCorners = () => {
         </button>
       </PopoverTrigger>
       <PopoverContent>
-        <div className="w-full flex items-center p-1">
+        <div className="relative w-full flex items-center gap-x-1 p-1">
           <button
             type="button"
             title="Rounded"
