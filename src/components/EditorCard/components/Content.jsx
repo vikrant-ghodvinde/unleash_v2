@@ -206,7 +206,7 @@ const Content = () => {
                 <div className="w-full flex-1">
                   <label className="text-xs mb-0.5">Replies</label>
                   <input
-                    type="text"
+                    type="number"
                     className="w-full h-8 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md"
                     value={postCounts.replies}
                     onChange={(e) =>
@@ -217,7 +217,7 @@ const Content = () => {
                 <div className="w-full flex-1">
                   <label className="text-xs mb-0.5">Shares</label>
                   <input
-                    type="text"
+                    type="number"
                     className="w-full h-8 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md"
                     value={postCounts.shares}
                     onChange={(e) =>
