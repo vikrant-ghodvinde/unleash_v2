@@ -10,6 +10,7 @@ import {
   RiImageAddLine,
   RiInstagramLine,
   RiLinkedinFill,
+  RiLogoutCircleRLine,
   RiRoundedCorner,
   RiSquareLine,
   RiText,
@@ -137,4 +138,8 @@ export const TextSnippetIcon = (props) => {
 
 export const TimeZoneIcon = (props) => {
   return <RiTimeZoneLine height={props.width} {...props} />;
+};
+
+export const SignOutIcon = (props) => {
+  return <RiLogoutCircleRLine height={props.width} {...props} />;
 };

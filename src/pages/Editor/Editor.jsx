@@ -4,6 +4,7 @@ import { useMediaQuery } from "@mui/material";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { useRef, useState } from "react";
+import { toast } from "sonner";
 
 const Editor = () => {
   const canvasRef = useRef(null);
@@ -29,6 +30,9 @@ const Editor = () => {
           link.href = dataUrl;
           link.download = "unleash-post.png";
           link.click();
+          toast("Success", {
+            description: "Post downloaded",
+          });
         });
       } else if (type === "JPEG") {
         html2canvas(canvasRef.current, {
@@ -42,6 +46,9 @@ const Editor = () => {
           link.href = dataUrl;
           link.download = "unleash-post.jpg";
           link.click();
+          toast("Success", {
+            description: "Post downloaded",
+          });
         });
       } else if (type === "PDF") {
         const pdf = new jsPDF();
@@ -55,12 +62,21 @@ const Editor = () => {
           const pdfHeight = pdf.internal.pageSize.getHeight();
           pdf.addImage(dataUrl, "JPEG", 0, 0, pdfWidth, pdfHeight);
           pdf.save();
+          toast("Success", {
+            description: "Post downloaded",
+          });
         });
       } else {
         console.log("Invalid Format");
+        toast("Error", {
+          description: "Invalid Format",
+        });
       }
     } catch (error) {
       console.log(error.message);
+      toast("Error", {
+        description: error.message,
+      });
       setLoading(false);
     } finally {
       setLoading(false);

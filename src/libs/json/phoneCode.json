@@ -1,0 +1,154 @@
+[
+  {
+    "country": "Argentina",
+    "phone_code": "+54"
+  },
+  {
+    "country": "Australia",
+    "phone_code": "+61"
+  },
+  {
+    "country": "Austria",
+    "phone_code": "+43"
+  },
+  {
+    "country": "Belgium",
+    "phone_code": "+32"
+  },
+  {
+    "country": "Brazil",
+    "phone_code": "+55"
+  },
+  {
+    "country": "Canada",
+    "phone_code": "+1"
+  },
+  {
+    "country": "China",
+    "phone_code": "+86"
+  },
+  {
+    "country": "Colombia",
+    "phone_code": "+57"
+  },
+  {
+    "country": "Denmark",
+    "phone_code": "+45"
+  },
+  {
+    "country": "Egypt",
+    "phone_code": "+20"
+  },
+  {
+    "country": "Finland",
+    "phone_code": "+358"
+  },
+  {
+    "country": "France",
+    "phone_code": "+33"
+  },
+  {
+    "country": "Germany",
+    "phone_code": "+49"
+  },
+  {
+    "country": "Greece",
+    "phone_code": "+30"
+  },
+  {
+    "country": "India",
+    "phone_code": "+91"
+  },
+  {
+    "country": "Indonesia",
+    "phone_code": "+62"
+  },
+  {
+    "country": "Italy",
+    "phone_code": "+39"
+  },
+  {
+    "country": "Japan",
+    "phone_code": "+81"
+  },
+  {
+    "country": "Kenya",
+    "phone_code": "+254"
+  },
+  {
+    "country": "Malaysia",
+    "phone_code": "+60"
+  },
+  {
+    "country": "Mexico",
+    "phone_code": "+52"
+  },
+  {
+    "country": "Netherlands",
+    "phone_code": "+31"
+  },
+  {
+    "country": "New Zealand",
+    "phone_code": "+64"
+  },
+  {
+    "country": "Nigeria",
+    "phone_code": "+234"
+  },
+  {
+    "country": "Norway",
+    "phone_code": "+47"
+  },
+  {
+    "country": "Russia",
+    "phone_code": "+7"
+  },
+  {
+    "country": "Saudi Arabia",
+    "phone_code": "+966"
+  },
+  {
+    "country": "Singapore",
+    "phone_code": "+65"
+  },
+  {
+    "country": "South Africa",
+    "phone_code": "+27"
+  },
+  {
+    "country": "South Korea",
+    "phone_code": "+82"
+  },
+  {
+    "country": "Spain",
+    "phone_code": "+34"
+  },
+  {
+    "country": "Sweden",
+    "phone_code": "+46"
+  },
+  {
+    "country": "Switzerland",
+    "phone_code": "+41"
+  },
+  {
+    "country": "Thailand",
+    "phone_code": "+66"
+  },
+  {
+    "country": "Turkey",
+    "phone_code": "+90"
+  },
+  {
+    "country": "United Arab Emirates",
+    "phone_code": "+971"
+  },
+  {
+    "country": "United Kingdom",
+    "phone_code": "+44"
+  },
+  {
+    "country": "United States",
+    "phone_code": "+1"
+  }
+]

@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
@@ -26,6 +26,9 @@ module.exports = {
       },
       maxWidth: {
         "1/2": "50%",
+      },
+      boxShadow: {
+        "full": "0 0 10px 0",
       },
       keyframes: {
         "accordion-down": {

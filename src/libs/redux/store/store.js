@@ -15,8 +15,10 @@ import textAlignReducer from "../reducers/textAlignReducer";
 import backgroundsReducer from "../reducers/backgroundsReducer";
 import fontStyleReducer from "../reducers/fontStyleReducer";
 import cardCornersReducer from "../reducers/cardCornersReducer";
+import authReducer from "../reducers/authReducer";
 
 const reducers = combineReducers({
+  auth: authReducer,
   colors: colorsReducer,
   fontSize: fontSizeReducer,
   textAlignment: textAlignReducer,

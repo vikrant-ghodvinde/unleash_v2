@@ -113,4 +113,9 @@
     background: #6d757f;
     border-radius: 30px;
   }
+
+  /* TOAST */
+  [aria-label="Close toast"] {
+    @apply bg-white;
+  }
 }
