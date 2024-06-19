@@ -4,9 +4,12 @@ import Editor from "./pages/Editor/Editor";
 import WebFont from "webfontloader";
 import { ContextProvider } from "./libs/context/context";
 import Auth from "./pages/Auth/Auth";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Toaster } from "./ui/shadcn/components/ui/sonner";
 import AppHeader from "./components/Header/AppHeader";
+import { useEffect } from "react";
+import { supabase } from "./libs/supabase/config";
+import { setLogin } from "./libs/redux/reducers/authReducer";
 
 WebFont.load({
   google: {
@@ -33,15 +36,27 @@ WebFont.load({
 });
 
 function App() {
+  const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
+  useEffect(() => {
+    supabase.auth.getUser().then((result) => {
+      console.log(result.data.data);
+      dispatch(
+        setLogin({
+          user: result.data.user,
+        })
+      );
+    });
+  }, []);
   return (
     <ContextProvider>
       <BrowserRouter>
-        {user && <AppHeader />}
+        {/* {user && <AppHeader />} */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/editor" element={user ? <Editor /> : <Auth />} />
+          {/* <Route path="/editor" element={user ? <Editor /> : <Auth />} /> */}
+          <Route path="/editor" element={<Editor />} />
         </Routes>
       </BrowserRouter>
       <Toaster closeButton />
