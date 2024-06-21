@@ -37,6 +37,7 @@ WebFont.load({
 });
 
 function App() {
+  console.log(window.location.origin)
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   useEffect(() => {
