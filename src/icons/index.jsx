@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 import {
+  RiBardLine,
   RiBubbleChartLine,
   RiChat3Line,
+  RiEqualizer2Line,
   RiFacebookFill,
   RiFontFamily,
   RiFontSize2,
@@ -26,6 +28,7 @@ import {
   AlignLeft,
   AlignRight,
   ColorFilter,
+  Shuffle,
 } from "iconoir-react";
 
 export const HeartIcon = (props) => {
@@ -82,6 +85,10 @@ export const ColorIcon = (props) => {
 
 export const SwapIcon = (props) => {
   return <FeatherIcon height={props.width} icon="refresh-cw" {...props} />;
+};
+
+export const ShuffleIcon = (props) => {
+  return <Shuffle height={props.width} {...props} />;
 };
 
 export const DownloadIcon = (props) => {
@@ -142,4 +149,12 @@ export const TimeZoneIcon = (props) => {
 
 export const SignOutIcon = (props) => {
   return <RiLogoutCircleRLine height={props.width} {...props} />;
+};
+
+export const SettingIcon = (props) => {
+  return <RiEqualizer2Line height={props.width} {...props} />;
+};
+
+export const BardIcon = (props) => {
+  return <RiBardLine height={props.width} {...props} />;
 };

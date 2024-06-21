@@ -18,6 +18,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/ui/shadcn/components/ui/select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/ui/shadcn/components/ui/tooltip";
 import { useDispatch, useSelector } from "react-redux";
 
 const Colors = () => {
@@ -34,14 +39,19 @@ const Colors = () => {
   };
   return (
     <Popover>
-      <PopoverTrigger asChild>
-        <button
-          type="button"
-          className="w-10 h-10 inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900"
-        >
-          <ColorIcon width={16} />
-        </button>
-      </PopoverTrigger>
+      <Tooltip>
+        <TooltipTrigger>
+          <PopoverTrigger asChild>
+            <span
+              role="button"
+              className="w-10 h-10 inline-flex items-center justify-center text-white text-xs bg-zinc-800 hover:bg-zinc-900"
+            >
+              <ColorIcon width={16} />
+            </span>
+          </PopoverTrigger>
+        </TooltipTrigger>
+        <TooltipContent>Background Color</TooltipContent>
+      </Tooltip>
       <PopoverContent>
         <div className="grid grid-cols-12">
           <div className="relative col-span-12 p-1">

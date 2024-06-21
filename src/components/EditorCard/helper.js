@@ -21,3 +21,28 @@ export const backgroundConfiguration = (type, primary, secondary, swapped) => {
       return primary;
   }
 };
+
+export const aspectRatioConfiguration = (aspectRatio) => {
+  switch (aspectRatio) {
+    case "linedIn(4:5)":
+      return "4/5";
+
+    case "linedIn(1:1)":
+      return "1/1";
+
+    case "instagram(4:5)":
+      return "4/5";
+
+    case "instagram(1:1)":
+      return "1/1";
+
+    case "instagram(9:16)":
+      return "9/16";
+
+    case "tik-too(9:16)":
+      return "9/16";
+
+    default:
+      return "1/1";
+  }
+};

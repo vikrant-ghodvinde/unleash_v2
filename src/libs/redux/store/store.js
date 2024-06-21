@@ -16,6 +16,7 @@ import backgroundsReducer from "../reducers/backgroundsReducer";
 import fontStyleReducer from "../reducers/fontStyleReducer";
 import cardCornersReducer from "../reducers/cardCornersReducer";
 import authReducer from "../reducers/authReducer";
+import templateReducer from "../reducers/templateReducer";
 
 const reducers = combineReducers({
   auth: authReducer,
@@ -25,6 +26,7 @@ const reducers = combineReducers({
   backgrounds: backgroundsReducer,
   fontStyle: fontStyleReducer,
   cardCorners: cardCornersReducer,
+  template: templateReducer,
 });
 
 const persistConfig = { key: "root", storage, version: 1 };

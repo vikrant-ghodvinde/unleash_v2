@@ -6,6 +6,11 @@ import {
   PopoverTrigger,
 } from "@/ui/shadcn/components/ui/popover";
 import { Switch } from "@/ui/shadcn/components/ui/switch";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/ui/shadcn/components/ui/tooltip";
 
 const UserImage = () => {
   const { userImage, setUserImage } = GetContext();
@@ -21,15 +26,19 @@ const UserImage = () => {
   };
   return (
     <Popover>
-      <PopoverTrigger asChild>
-        <button
-          type="button"
-          title="User Image"
-          className={`text-[10px] w-10 h-10 rounded-md inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900`}
-        >
-          <UserImageIcon width={16} />
-        </button>
-      </PopoverTrigger>
+      <Tooltip>
+        <TooltipTrigger>
+          <PopoverTrigger asChild>
+            <span
+              role="button"
+              className="w-10 h-10 inline-flex items-center justify-center text-white text-xs bg-zinc-800 hover:bg-zinc-900"
+            >
+              <UserImageIcon width={16} />
+            </span>
+          </PopoverTrigger>
+        </TooltipTrigger>
+        <TooltipContent>Profile Image</TooltipContent>
+      </Tooltip>
       <PopoverContent>
         <div className="relative w-80 max-h-[450px] p-2 overflow-y-auto scrollbar-y">
           <div className="w-full flex items-center gap-x-1 mb-1.5">

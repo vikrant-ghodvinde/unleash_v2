@@ -1,4 +1,5 @@
 import GoogleAuth from "./components/GoogleAuth";
+import LinkedInAuth from "./components/LinkedInAuth";
 import PhoneAuth from "./components/PhoneAuth";
 
 const Auth = () => {
@@ -25,21 +26,24 @@ const Auth = () => {
                       Facere, deleniti?
                     </p>
                   </div>
-                  <div className="grid grid-cols-12 gap-y-8 mt-8">
-                    <div className="col-span-12">
+                  <div className="grid grid-cols-12 gap-y-8 gap-x-4 mt-8">
+                    {/* <div className="col-span-12">
                       <PhoneAuth />
                     </div>
                     <div className="col-span-12">
                       <div className="flex items-center justify-center">
                         <div className="flex-1 w-full h-1 border-b border-zinc-300"></div>
                         <div className="flex-1 text-center text-sm">
-                          Or with Google
+                          Or with
                         </div>
                         <div className="flex-1 w-full h-1 border-b border-zinc-300"></div>
                       </div>
-                    </div>
-                    <div className="col-span-12">
+                    </div> */}
+                    <div className="col-span-12 sm:col-span-6">
                       <GoogleAuth />
+                    </div>
+                    <div className="col-span-12 sm:col-span-6">
+                      <LinkedInAuth />
                     </div>
                   </div>
                 </div>

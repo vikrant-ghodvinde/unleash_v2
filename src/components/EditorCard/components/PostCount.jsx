@@ -1,25 +1,42 @@
 import { BubbleChartIcon } from "@/icons";
 import { GetContext } from "@/libs/context/context";
+import { getFormattedDateTime } from "@/libs/helper";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/ui/shadcn/components/ui/popover";
 import { Switch } from "@/ui/shadcn/components/ui/switch";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/ui/shadcn/components/ui/tooltip";
 
 const PostCount = () => {
-  const { postCounts, setPostCounts } = GetContext();
+  const { postCounts, setPostCounts, timeStamp, setTimeStamp } = GetContext();
+  const handleTimeStamp = () => {
+    setTimeStamp({
+      ...timeStamp,
+      visible: !timeStamp.visible,
+      text: getFormattedDateTime(),
+    });
+  };
   return (
     <Popover>
-      <PopoverTrigger asChild>
-        <button
-          type="button"
-          title="Post Counts"
-          className={`text-[10px] w-10 h-10 rounded-md inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900`}
-        >
-          <BubbleChartIcon width={16} />
-        </button>
-      </PopoverTrigger>
+      <Tooltip>
+        <TooltipTrigger>
+          <PopoverTrigger asChild>
+            <span
+              role="button"
+              className="w-10 h-10 inline-flex items-center justify-center text-white text-xs bg-zinc-800 hover:bg-zinc-900"
+            >
+              <BubbleChartIcon width={16} />
+            </span>
+          </PopoverTrigger>
+        </TooltipTrigger>
+        <TooltipContent>Post Counts</TooltipContent>
+      </Tooltip>
       <PopoverContent>
         <div className="relative w-80 max-h-[450px] p-2 overflow-y-auto scrollbar-y">
           <div className="relative w-full">
@@ -70,6 +87,16 @@ const PostCount = () => {
                   }
                 />
               </div>
+            </div>
+          </div>
+          <div className="relative mt-3 overflow-y-auto scrollbar-y">
+            <div className="w-full flex items-center gap-x-1 mb-1">
+              <span className="text-xs mb-0.5">Time Stamp</span>
+              <Switch
+                value={timeStamp.visible}
+                checked={timeStamp.visible}
+                onCheckedChange={handleTimeStamp}
+              />
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import AppWrapper from "@/components/AppWrapper/AppWrapper";
 import EditorCard from "@/components/EditorCard/EditorCard";
 import ExportPostDialog from "@/components/ExportPostDialog/ExportPostDialog";
 import { useMediaQuery } from "@mui/material";
@@ -83,14 +84,16 @@ const Editor = () => {
     }
   };
   return (
-    <section className="relative bg-dots">
-      <div className="w-full min-h-screen px-1 sm:px-3 flex flex-col items-center justify-center overflow-x-auto">
-        <EditorCard canvasRef={canvasRef} loading={loading} />
-        <div className="mt-20">
-          <ExportPostDialog handleDownload={handleDownload} />
+    <AppWrapper>
+      <section className="relative bg-dots py-12">
+        <div className="w-full min-h-screen px-1 sm:px-3 flex flex-col items-center justify-center overflow-x-auto">
+          <EditorCard canvasRef={canvasRef} loading={loading} />
+          <div className="mt-36 sm:mt-20">
+            <ExportPostDialog handleDownload={handleDownload} />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </AppWrapper>
   );
 };
 
