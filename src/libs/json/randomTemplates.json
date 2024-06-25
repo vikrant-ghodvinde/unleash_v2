@@ -35,10 +35,10 @@
       "replies": "200",
       "shares": "100"
     },
-    "primaryBackground": "#b55050",
+    "primaryBackground": "#006fff",
     "secondaryBackground": "#ffffff",
     "imageBackground": "/images/backgrounds/background5.png",
-    "backgroundImageOpacity": [0.2],
+    "backgroundImageOpacity": [0.3],
     "backgroundType": "radialGradient",
     "cardCorners": "squared",
     "primaryColor": "#0025ff",

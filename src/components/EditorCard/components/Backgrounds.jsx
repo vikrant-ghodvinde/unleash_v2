@@ -116,7 +116,7 @@ const Backgrounds = () => {
                             <img
                               src={item.url}
                               alt=""
-                              className="w-full h-full opacity-50"
+                              className="w-full h-full min-h-[150px] object-cover"
                             />
                           </div>
                         </div>

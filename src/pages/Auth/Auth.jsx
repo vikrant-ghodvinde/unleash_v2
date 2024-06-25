@@ -1,18 +1,29 @@
+import { Link } from "react-router-dom";
 import GoogleAuth from "./components/GoogleAuth";
 import LinkedInAuth from "./components/LinkedInAuth";
-// import PhoneAuth from "./components/PhoneAuth";
 
 const Auth = () => {
   return (
-    <section className="relative bg-[url('/images/pxfuel.jpg')] bg-cover">
+    <section className="relative bg-black bg-cover text-white">
       <div className="container">
-        <div className="w-full min-h-screen py-10 flex items-center">
-          <div className="relative mx-auto grid grid-cols-12 gap-x-5 gap-y-10">
-            <div className="relative col-span-12 lg:col-span-8">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="inline-flex items-center gap-2">
-                  <img src="/images/logo.png" alt="unleash" className="w-16" />
-                  <h3 className="text-2xl font-black">Unleash</h3>
+        <div className="w-full min-h-screen">
+          <div className="grid grid-cols-12 items-center gap-x-5 gap-y-10">
+            <div className="col-span-12 lg:col-span-8">
+              <div className="relative w-full h-full text-center flex items-center justify-center z-10 before:absolute before:w-[70%] before:h-[70%] before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[100%] before:bg-primary-gradient before:-z-10 before:blur-[100px] before:opacity-40">
+                <div className="min-h-screen flex flex-col items-center justify-center py-20">
+                  <h1 className="text-2xl md:text-5xl font-bold mb-8 leading-snug md:leading-snug">
+                    Sign In with{" "}
+                    <span className="relative before:absolute before:w-full before:h-1 before:top-full before:left-1/2 before:-translate-x-1/2 before:bg-primary-gradient before:rounded-[100%]">
+                      Unleash
+                    </span>
+                  </h1>
+                  <p className="mb-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Placeat, necessitatibus!
+                  </p>
+                  <Link to="/" className="btn btn-primary">
+                    Go Back
+                  </Link>
                 </div>
               </div>
             </div>
@@ -20,25 +31,13 @@ const Auth = () => {
               <div className="relative w-full py-6 sm:py-10 px-2 sm:px-5 rounded-xl bg-white shadow-full shadow-black/10">
                 <div className="p-4">
                   <div className="text-center">
-                    <h2 className="text-xl font-bold">Sign In</h2>
+                    <h2 className="text-xl text-black font-bold">Sign In</h2>
                     <p className="text-sm text-zinc-600 font-light">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                       Facere, deleniti?
                     </p>
                   </div>
                   <div className="grid grid-cols-12 gap-y-8 gap-x-4 mt-8">
-                    {/* <div className="col-span-12">
-                      <PhoneAuth />
-                    </div>
-                    <div className="col-span-12">
-                      <div className="flex items-center justify-center">
-                        <div className="flex-1 w-full h-1 border-b border-zinc-300"></div>
-                        <div className="flex-1 text-center text-sm">
-                          Or with
-                        </div>
-                        <div className="flex-1 w-full h-1 border-b border-zinc-300"></div>
-                      </div>
-                    </div> */}
                     <div className="col-span-12 sm:col-span-6">
                       <GoogleAuth />
                     </div>
