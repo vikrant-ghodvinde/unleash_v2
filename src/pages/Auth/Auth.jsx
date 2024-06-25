@@ -1,6 +1,6 @@
 import GoogleAuth from "./components/GoogleAuth";
 import LinkedInAuth from "./components/LinkedInAuth";
-import PhoneAuth from "./components/PhoneAuth";
+// import PhoneAuth from "./components/PhoneAuth";
 
 const Auth = () => {
   return (

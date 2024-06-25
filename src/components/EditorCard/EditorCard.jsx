@@ -51,7 +51,7 @@ const EditorCard = ({ canvasRef, loading }) => {
         style={{
           backgroundImage: `url(${imageBackground})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           opacity: backgroundImageOpacity,
         }}
       ></div>

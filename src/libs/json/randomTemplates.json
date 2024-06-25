@@ -1,0 +1,56 @@
+[
+  {
+    "socialMedia": ["facebook", "instagram"],
+    "postContent": "Never lose an opportunity of seeing anything beautiful, for beauty is God's handwriting.",
+    "postCounts": {
+      "visible": true,
+      "likes": "1000",
+      "replies": "500",
+      "shares": "300"
+    },
+    "primaryBackground": "#24262c",
+    "secondaryBackground": "#ffffff",
+    "imageBackground": "/images/backgrounds/background1.png",
+    "backgroundImageOpacity": [0.2],
+    "backgroundType": "linearGradient",
+    "cardCorners": "rounded",
+    "primaryColor": "#000000",
+    "secondaryColor": "#000000",
+    "fontSize": {
+      "headingSize": "small",
+      "contentSize": "small"
+    },
+    "primaryFontFamily": "'Playfair Display', serif",
+    "primaryFontWeight": "400",
+    "secondaryFontFamily": "'PT Serif', serif",
+    "secondaryFontWeight": "700",
+    "alignment": "justify"
+  },
+  {
+    "socialMedia": ["facebook", "twitter"],
+    "postContent": "Since love grows within you, so beauty grows. For love is the beauty of the soul.",
+    "postCounts": {
+      "visible": true,
+      "likes": "5000",
+      "replies": "200",
+      "shares": "100"
+    },
+    "primaryBackground": "#b55050",
+    "secondaryBackground": "#ffffff",
+    "imageBackground": "/images/backgrounds/background5.png",
+    "backgroundImageOpacity": [0.2],
+    "backgroundType": "radialGradient",
+    "cardCorners": "squared",
+    "primaryColor": "#0025ff",
+    "secondaryColor": "#000000",
+    "fontSize": {
+      "headingSize": "small",
+      "contentSize": "medium"
+    },
+    "primaryFontFamily": "'Rokkitt', slab-serif",
+    "primaryFontWeight": "400",
+    "secondaryFontFamily": "'Bitter', serif",
+    "secondaryFontWeight": "700",
+    "alignment": "center"
+  }
+]
