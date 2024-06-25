@@ -40,26 +40,35 @@ const CardCorners = () => {
       </Tooltip>
       <PopoverContent>
         <div className="relative w-full flex items-center gap-x-1 p-1">
-          <button
-            type="button"
-            title="Rounded"
-            className={`text-[10px] w-10 h-10 rounded-md inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
-              corners === "rounded" ? "bg-zinc-900" : "bg-transparent"
-            }`}
-            onClick={() => handleCornerChange("rounded")}
-          >
-            <RoundedCornerIcon width={14} />
-          </button>
-          <button
-            type="button"
-            title="Squared"
-            className={`text-[10px] w-10 h-10 rounded-md inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
-              corners === "squared" ? "bg-zinc-900" : "bg-transparent"
-            }`}
-            onClick={() => handleCornerChange("squared")}
-          >
-            <SquareCornerIcon width={14} />
-          </button>
+          <Tooltip>
+            <TooltipTrigger>
+              <span
+                role="button"
+                className={`text-[10px] w-10 h-10 rounded-md inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
+                  corners === "rounded" ? "bg-zinc-900" : "bg-transparent"
+                }`}
+                onClick={() => handleCornerChange("rounded")}
+              >
+                <RoundedCornerIcon width={14} />
+              </span>
+            </TooltipTrigger>
+            <TooltipContent>Rounded</TooltipContent>
+          </Tooltip>
+          
+          <Tooltip>
+            <TooltipTrigger>
+              <span
+                role="button"
+                className={`text-[10px] w-10 h-10 rounded-md inline-flex items-center justify-center text-white text-xs hover:bg-zinc-900 ${
+                  corners === "squared" ? "bg-zinc-900" : "bg-transparent"
+                }`}
+                onClick={() => handleCornerChange("squared")}
+              >
+                <SquareCornerIcon width={14} />
+              </span>
+            </TooltipTrigger>
+            <TooltipContent>Squared</TooltipContent>
+          </Tooltip>
         </div>
       </PopoverContent>
     </Popover>
