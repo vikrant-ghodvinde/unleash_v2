@@ -41,6 +41,7 @@ const UserDetails = () => {
                   type="text"
                   className="w-full h-8 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md"
                   value={profileName.text}
+                  placeholder="Enter Profile Name"
                   onChange={(e) =>
                     setProfileName({ ...profileName, text: e.target.value })
                   }
@@ -66,6 +67,7 @@ const UserDetails = () => {
                   type="text"
                   className="w-full h-8 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md"
                   value={userName.text}
+                  placeholder="Enter user Name"
                   onChange={(e) =>
                     setUserName({ ...userName, text: e.target.value })
                   }

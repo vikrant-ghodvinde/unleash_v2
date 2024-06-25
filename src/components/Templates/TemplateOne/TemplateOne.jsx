@@ -30,6 +30,9 @@ const TemplateOne = () => {
   const { primaryColor, secondaryColor } = useSelector((state) => state.colors);
   const { corners } = useSelector((state) => state.cardCorners);
 
+  const getUserImage = useSelector((state) => state.auth.userImage);
+  const getProfileName = useSelector((state) => state.auth.userName);
+
   const isDesktop = useMediaQuery("(min-width:640px)");
 
   return (
@@ -44,9 +47,9 @@ const TemplateOne = () => {
           <div className="flex items-center gap-x-2">
             {userImage.visible && (
               <div className="relative w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gray-800 overflow-hidden">
-                {userImage.image ? (
+                {getUserImage || userImage.image ? (
                   <img
-                    src={userImage.image}
+                    src={userImage.image ? userImage.image : getUserImage}
                     alt=""
                     className="w-full h-full"
                   />
@@ -66,7 +69,7 @@ const TemplateOne = () => {
                   color: secondaryColor,
                 }}
               >
-                {profileName.text}
+                {profileName.text ? profileName.text : getProfileName}
                 {profileName.verified && (
                   <VerifiedIcon width={14} height={14} color="#1EA1F3" />
                 )}
@@ -79,7 +82,7 @@ const TemplateOne = () => {
                     color: secondaryColor,
                   }}
                 >
-                  {userName.text}
+                  {userName.text ? userName.text : getProfileName.split(" ")[0]}
                 </p>
               )}
             </div>

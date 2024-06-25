@@ -1,25 +1,20 @@
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useState } from "react";
-import { useSelector } from "react-redux";
 
 const AppContext = createContext();
 
 export const ContextProvider = ({ children }) => {
-  // USER VALUES
-  const getUserName = useSelector((state) => state.auth.userName);
-  const getUserImage = useSelector((state) => state.auth.userImage);
-
   const [userImage, setUserImage] = useState({
     visible: true,
-    image: getUserImage ? getUserImage : "",
+    image: "",
   });
   const [profileName, setProfileName] = useState({
     verified: false,
-    text: getUserName ? getUserName : "John Doe",
+    text: "",
   });
   const [userName, setUserName] = useState({
     visible: true,
-    text: getUserName ? getUserName.split(" ")[0] : "john_027",
+    text: "",
   });
   const [socialMedia, setSocialMedia] = useState(["facebook"]);
   const [postContent, setPostContent] = useState(
