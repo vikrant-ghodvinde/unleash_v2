@@ -8,6 +8,7 @@ import { Suspense, lazy, useEffect } from "react";
 import { supabase } from "./libs/supabase/config";
 import { setLogin } from "./libs/redux/reducers/authReducer";
 import { TooltipProvider } from "./ui/shadcn/components/ui/tooltip";
+import Loader from "./components/Loader/Loader";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Editor = lazy(() => import("./pages/Editor/Editor"));
@@ -37,7 +38,7 @@ WebFont.load({
 });
 
 function App() {
-  console.log(window.location.origin)
+  console.log(window.location.origin);
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   useEffect(() => {
@@ -62,7 +63,7 @@ function App() {
             <Route
               path="/"
               element={
-                <Suspense fallback={"Loading..."}>
+                <Suspense fallback={<Loader />}>
                   <Home />
                 </Suspense>
               }
@@ -71,7 +72,7 @@ function App() {
             <Route
               path="/editor"
               element={
-                <Suspense fallback={"Loading..."}>
+                <Suspense fallback={<Loader />}>
                   {user ? <Editor /> : <Auth />}
                 </Suspense>
               }
