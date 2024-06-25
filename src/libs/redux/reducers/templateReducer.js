@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const templateSlice = createSlice({
   name: "template",
   initialState: {
-    templateType: "linedIn(4:5)",
+    templateType: "linedIn(1:1)",
   },
   reducers: {
     setTemplateType: (state, action) => {

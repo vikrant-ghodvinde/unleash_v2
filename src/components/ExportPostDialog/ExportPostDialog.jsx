@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { DownloadIcon } from "@/icons";
-import { Button } from "@/ui/shadcn/components/ui/button";
 import {
   Dialog,
   DialogContent,
