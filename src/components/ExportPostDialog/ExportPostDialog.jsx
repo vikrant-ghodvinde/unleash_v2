@@ -14,7 +14,7 @@ const ExportPostDialog = ({ handleDownload }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Download</Button>
+        <button type="button" className="btn btn-primary">Download</button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
