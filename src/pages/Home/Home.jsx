@@ -20,7 +20,7 @@ const Home = () => {
             </div>
             <div className="relative w-full max-w-3xl mx-auto text-center z-10 flex flex-col items-center justify-center gap-y-4">
               <h2 className="text-2xl md:text-5xl font-bold">
-                <span>Unleash</span> = Your Creative Partner
+                <span className="bg-primary-gradient text-transparent bg-clip-text">Unleash</span> = Your Creative Partner
               </h2>
               <p className="text-sm md:text-lg max-w-2xl">
                 It empowers you to bring your social media vision to life with
