@@ -11,7 +11,7 @@ const Slider = () => {
         <div className="w-full max-w-4xl mx-auto">
           <div className="section__title">
             <p>Features</p>
-            <h2>Chat Smarter, Not Harder with Brainwave</h2>
+            <h2>Create Smarter, Not Harder with Unleash</h2>
           </div>
         </div>
         <Swiper
