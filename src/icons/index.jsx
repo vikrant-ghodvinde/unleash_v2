@@ -3,6 +3,7 @@ import {
   RiBardLine,
   RiBubbleChartLine,
   RiChat3Line,
+  RiDashboardLine,
   RiEqualizer2Line,
   RiFacebookFill,
   RiFontFamily,
@@ -157,4 +158,8 @@ export const SettingIcon = (props) => {
 
 export const BardIcon = (props) => {
   return <RiBardLine height={props.width} {...props} />;
+};
+
+export const DashboardIcon = (props) => {
+  return <RiDashboardLine height={props.width} {...props} />;
 };

@@ -68,16 +68,30 @@ function App() {
                 </Suspense>
               }
             />
-            {/* <Route path="/auth" element={<Auth />} /> */}
             <Route
+              path="/auth"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <Auth />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/editor"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <Editor />
+                </Suspense>
+              }
+            />
+            {/* <Route
               path="/editor"
               element={
                 <Suspense fallback={<Loader />}>
                   {user ? <Editor /> : <Auth />}
                 </Suspense>
               }
-            />
-            {/* <Route path="/editor" element={<Editor />} /> */}
+            /> */}
           </Routes>
         </BrowserRouter>
         <Toaster closeButton />
