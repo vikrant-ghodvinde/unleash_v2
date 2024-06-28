@@ -5,7 +5,7 @@ import AppHeader from "../Header/AppHeader";
 import { SettingIcon } from "@/icons";
 import { useState } from "react";
 
-const AppWrapper = ({ children }) => {
+const AppWrapper = ({ children, setOpen }) => {
   const { user } = useSelector((state) => state.auth);
   const [sidebar, setSidebar] = useState(false);
   return (
@@ -23,7 +23,7 @@ const AppWrapper = ({ children }) => {
           onClick={() => setSidebar(false)}
         ></div>
         <div className="w-full z-50">
-          <Sidebar />
+          <Sidebar setOpen={setOpen} />
         </div>
       </div>
       <div className="absolute top[73px] left-0 lg:left-72 w-full lg:w-[calc(100%-288px)] h-[calc(100vh-73px)] overflow-y-auto scrollbar-y">
@@ -39,6 +39,7 @@ const AppWrapper = ({ children }) => {
           <button
             type="button"
             className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-6 text-xs bg-zinc-800 text-white"
+            onClick={() => setOpen(true)}
           >
             <SettingIcon width={16} />
             AI Templates

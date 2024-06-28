@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { BardIcon } from "@/icons";
 import PostContent from "./components/PostContent";
 import TemplateType from "./components/TemplateType";
 
-const Sidebar = () => {
+const Sidebar = ({ setOpen }) => {
   return (
     <div className="relative w-full h-full text-white">
       <div className="grid grid-cols-12 gap-2">
@@ -16,6 +17,7 @@ const Sidebar = () => {
                 <button
                   type="button"
                   className="inline-flex items-center justify-center gap-2 py-3 px-6 text-xs bg-zinc-800 hover:bg-zinc-900 w-full rounded-md transition-all duration-300"
+                  onClick={() => setOpen(true)}
                 >
                   <BardIcon width={16} />
                   Generate Template

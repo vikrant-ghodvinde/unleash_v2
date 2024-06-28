@@ -1,3 +1,4 @@
+import AITemplates from "@/components/AITemplates/AITemplates";
 import AppWrapper from "@/components/AppWrapper/AppWrapper";
 import EditorCard from "@/components/EditorCard/EditorCard";
 import ExportPostDialog from "@/components/ExportPostDialog/ExportPostDialog";
@@ -10,6 +11,7 @@ import { toast } from "sonner";
 const Editor = () => {
   const canvasRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [templateGenerator, setTemplateGenerator] = useState(false);
   const matches = useMediaQuery("(min-width:640px)");
   const handleDownload = (type) => {
     setLoading(true);
@@ -84,7 +86,7 @@ const Editor = () => {
     }
   };
   return (
-    <AppWrapper>
+    <AppWrapper open={templateGenerator} setOpen={setTemplateGenerator}>
       <section className="relative bg-dots py-12">
         <div className="w-full min-h-screen px-1 sm:px-3 flex flex-col items-center justify-center overflow-x-auto">
           <EditorCard canvasRef={canvasRef} loading={loading} />
@@ -93,6 +95,7 @@ const Editor = () => {
           </div>
         </div>
       </section>
+      <AITemplates open={templateGenerator} setOpen={setTemplateGenerator} />
     </AppWrapper>
   );
 };
