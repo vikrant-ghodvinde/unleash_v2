@@ -8,6 +8,7 @@ import {
 import { useMediaQuery } from "@mui/material";
 import { CommentIcon, HeartIcon, ShareIcon, VerifiedIcon } from "@/icons";
 import { postCountConfiguration } from "@/libs/helper";
+import StyledContent from "../StyledContent/StyledContent";
 
 const TemplateOne = () => {
   const {
@@ -62,11 +63,9 @@ const TemplateOne = () => {
             )}
             <div className="relative">
               <h6
-                className="text-[10px] sm:text-xs flex items-center gap-x-1"
+                className="text-[10px] sm:text-xs flex items-center font-bold gap-x-1"
                 style={{
-                  fontFamily: secondaryFontFamily,
-                  fontWeight: secondaryFontWeight,
-                  color: secondaryColor,
+                  fontFamily: primaryFontFamily,
                 }}
               >
                 {profileName.text ? profileName.text : getProfileName}
@@ -78,8 +77,7 @@ const TemplateOne = () => {
                 <p
                   className="text-[8px] sm:text-[10px]"
                   style={{
-                    fontFamily: secondaryFontFamily,
-                    color: secondaryColor,
+                    fontFamily: primaryFontFamily,
                   }}
                 >
                   {userName.text ? userName.text : getProfileName.split(" ")[0]}
@@ -110,7 +108,13 @@ const TemplateOne = () => {
             color: primaryColor,
           }}
         >
-          {postContent}
+          {/* {postContent} */}
+          <StyledContent
+            sentence={postContent}
+            color={secondaryColor}
+            fontWeight={secondaryFontWeight}
+            fontFamily={secondaryFontFamily}
+          />
         </pre>
         {timeStamp.visible && (
           <div className="relative w-full">

@@ -3,6 +3,7 @@ import {
   RiBardLine,
   RiBubbleChartLine,
   RiChat3Line,
+  RiCodeLine,
   RiDashboardLine,
   RiEqualizer2Line,
   RiFacebookFill,
@@ -167,4 +168,8 @@ export const DashboardIcon = (props) => {
 
 export const DropDownIcon = (props) => {
   return <NavArrowDown height={props.width} {...props} />;
+};
+
+export const CodeIcon = (props) => {
+  return <RiCodeLine height={props.width} {...props} />;
 };

@@ -18,7 +18,7 @@ export const ContextProvider = ({ children }) => {
   });
   const [socialMedia, setSocialMedia] = useState(["facebook"]);
   const [postContent, setPostContent] = useState(
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum dolores praesentium? Reiciendis voluptatibus eaque soluta omnis saepe deleniti hic non deserunt provident. Voluptate nulla quisquam sunt magnam quas! Dolore!"
+    "The greatest glory in living lies not in never falling, but in rising every time we fall."
   );
   const [postCounts, setPostCounts] = useState({
     visible: false,

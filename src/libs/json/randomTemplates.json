@@ -187,5 +187,32 @@
     "secondaryFontFamily": "'Abel', sans-serif",
     "secondaryFontWeight": "700",
     "alignment": "center"
+  },
+  {
+    "socialMedia": ["instagram", "facebook", "twitter"],
+    "postContent": "create and Download beautiful images for Social Media posts with Unleash \n\n<c>#unleash #erience_solutions</c>",
+    "postCounts": {
+      "visible": true,
+      "likes": "3000",
+      "replies": "2000",
+      "shares": "1000"
+    },
+    "primaryBackground": "#fff",
+    "secondaryBackground": "#076585",
+    "imageBackground": "/images/backgrounds/background5.png",
+    "backgroundImageOpacity": [0.2],
+    "backgroundType": "radialGradient",
+    "cardCorners": "rounded",
+    "primaryColor": "#000000",
+    "secondaryColor": "#006aff",
+    "fontSize": {
+      "headingSize": "small",
+      "contentSize": "small"
+    },
+    "primaryFontFamily": "'Abel', sans-serif",
+    "primaryFontWeight": "400",
+    "secondaryFontFamily": "'Abel', sans-serif",
+    "secondaryFontWeight": "400",
+    "alignment": "left"
   }
 ]
