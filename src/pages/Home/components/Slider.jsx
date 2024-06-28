@@ -3,15 +3,17 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import { useTranslation } from "react-i18next";
 
 const Slider = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative py-20">
       <div className="px-4">
         <div className="w-full max-w-4xl mx-auto">
           <div className="section__title">
-            <p>Features</p>
-            <h2>Create Smarter, Not Harder with Unleash</h2>
+            <p>{t("Features")}</p>
+            <h2>{t("FeaturesText")}</h2>
           </div>
         </div>
         <Swiper
@@ -41,57 +43,40 @@ const Slider = () => {
           <SwiperSlide>
             <div className="card-primary">
               <div className="card-body">
-                <h5>Easy to Use</h5>
-                <p>
-                  Our tool is super easy to use, allowing anyone to make amazing
-                  posts without needing to be a design expert.
-                </p>
+                <h5>{t("FeatureOne")}</h5>
+                <p>{t("FeatureTextOne")}</p>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="card-primary">
               <div className="card-body">
-                <h5>Smart Resize</h5>
-                <p>
-                  Our smart resize feature automatically adjusts your design
-                  elements so everything looks just right, saving you time and
-                  hassle.
-                </p>
+                <h5>{t("FeatureTwo")}</h5>
+                <p>{t("FeatureTextTwo")}</p>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="card-primary">
               <div className="card-body">
-                <h5>Colors & Fonts Made Easy</h5>
-                <p>
-                  We&apos;ve picked out great colors and fonts for you, so you can
-                  easily make designs that look fantastic together.
-                </p>
+              <h5>{t("FeatureThree")}</h5>
+              <p>{t("FeatureTextThree")}</p>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="card-primary">
               <div className="card-body">
-                <h5>Make It Yours</h5>
-                <p>
-                  Customize your post templates to match your style or brand,
-                  keeping your look consistent on all social media.
-                </p>
+              <h5>{t("FeatureFour")}</h5>
+              <p>{t("FeatureTextFour")}</p>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="card-primary">
               <div className="card-body">
-                <h5>Export Your Way</h5>
-                <p>
-                  Whether you need a high-quality PDF or JPGs for your posts,
-                  our tool lets you export easily, matching the requirements of
-                  different platforms.
-                </p>
+              <h5>{t("FeatureFive")}</h5>
+              <p>{t("FeatureTextFive")}</p>
               </div>
             </div>
           </SwiperSlide>

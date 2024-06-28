@@ -2,8 +2,10 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Slider from "./components/Slider";
 import Footer from "./components/Footer";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-black text-white overflow-x-hidden">
       <Navbar />
@@ -20,14 +22,13 @@ const Home = () => {
             </div>
             <div className="relative w-full max-w-3xl mx-auto text-center z-10 flex flex-col items-center justify-center gap-y-4">
               <h2 className="text-2xl md:text-5xl font-bold">
-                <span className="bg-primary-gradient text-transparent bg-clip-text">Unleash</span> = Your Creative Partner
+                <span className="bg-primary-gradient text-transparent bg-clip-text">
+                  Unleash
+                </span>{" "}
+                = {t("YourCreativePartner")}
               </h2>
               <p className="text-sm md:text-lg max-w-2xl">
-                It empowers you to bring your social media vision to life with
-                ease 🛠️ and flair 💫. With its intuitive design features 🎨,
-                smart automation 🤖, and customizable options 🎛️. Dive into a
-                world 🌍 where design meets simplicity 🍃, and let your
-                creativity soar 🚀 without limits 🚫.
+                {t("YourCreativePartnerText")}
               </p>
             </div>
           </div>

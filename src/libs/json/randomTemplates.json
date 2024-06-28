@@ -8,8 +8,8 @@
       "replies": "500",
       "shares": "300"
     },
-    "primaryBackground": "#24262c",
-    "secondaryBackground": "#ffffff",
+    "primaryBackground": "#662D8C",
+    "secondaryBackground": "#ED1E79",
     "imageBackground": "/images/backgrounds/background1.png",
     "backgroundImageOpacity": [0.2],
     "backgroundType": "linearGradient",
@@ -35,8 +35,8 @@
       "replies": "200",
       "shares": "100"
     },
-    "primaryBackground": "#006fff",
-    "secondaryBackground": "#ffffff",
+    "primaryBackground": "#02AABD",
+    "secondaryBackground": "#00CDAC",
     "imageBackground": "/images/backgrounds/background5.png",
     "backgroundImageOpacity": [0.3],
     "backgroundType": "radialGradient",
@@ -50,6 +50,141 @@
     "primaryFontFamily": "'Rokkitt', slab-serif",
     "primaryFontWeight": "400",
     "secondaryFontFamily": "'Bitter', serif",
+    "secondaryFontWeight": "700",
+    "alignment": "center"
+  },
+  {
+    "socialMedia": ["twitter", "linkedin", "instagram"],
+    "postContent": "For me, becoming isn’t about arriving somewhere or achieving a certain aim. I see it instead as forward motion, a means of evolving, a way to reach continuously toward a better self. The journey doesn’t end.",
+    "postCounts": {
+      "visible": true,
+      "likes": "300",
+      "replies": "200",
+      "shares": "100"
+    },
+    "primaryBackground": "#2E3192",
+    "secondaryBackground": "#1BFFFF",
+    "imageBackground": "/images/backgrounds/background4.png",
+    "backgroundImageOpacity": [0.2],
+    "backgroundType": "linearGradient",
+    "cardCorners": "rounded",
+    "primaryColor": "#000000",
+    "secondaryColor": "#000000",
+    "fontSize": {
+      "headingSize": "small",
+      "contentSize": "small"
+    },
+    "primaryFontFamily": "'Oswald', sans-serif",
+    "primaryFontWeight": "400",
+    "secondaryFontFamily": "'Abel', sans-serif",
+    "secondaryFontWeight": "700",
+    "alignment": "justify"
+  },
+  {
+    "socialMedia": ["instagram"],
+    "postContent": "Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.",
+    "postCounts": {
+      "visible": true,
+      "likes": "3000",
+      "replies": "2000",
+      "shares": "1000"
+    },
+    "primaryBackground": "#09203F",
+    "secondaryBackground": "#537895",
+    "imageBackground": "/images/backgrounds/background2.png",
+    "backgroundImageOpacity": [0.2],
+    "backgroundType": "linearGradient",
+    "cardCorners": "rounded",
+    "primaryColor": "#000000",
+    "secondaryColor": "#000000",
+    "fontSize": {
+      "headingSize": "small",
+      "contentSize": "medium"
+    },
+    "primaryFontFamily": "'Lora', serif",
+    "primaryFontWeight": "400",
+    "secondaryFontFamily": "'Lora', serif",
+    "secondaryFontWeight": "700",
+    "alignment": "left"
+  },
+  {
+    "socialMedia": ["instagram"],
+    "postContent": "Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.",
+    "postCounts": {
+      "visible": false,
+      "likes": "3000",
+      "replies": "2000",
+      "shares": "1000"
+    },
+    "primaryBackground": "#764BA2",
+    "secondaryBackground": "#667EEA",
+    "imageBackground": "/images/backgrounds/background9.png",
+    "backgroundImageOpacity": [0.2],
+    "backgroundType": "linearGradient",
+    "cardCorners": "squared",
+    "primaryColor": "#000000",
+    "secondaryColor": "#000000",
+    "fontSize": {
+      "headingSize": "small",
+      "contentSize": "medium"
+    },
+    "primaryFontFamily": "'Abel', sans-serif",
+    "primaryFontWeight": "400",
+    "secondaryFontFamily": "'Abel', sans-serif",
+    "secondaryFontWeight": "700",
+    "alignment": "left"
+  },
+  {
+    "socialMedia": ["instagram", "facebook", "twitter"],
+    "postContent": "Rejection is the part of the interviews don't sit and learn from this. \n\nKeep trying 100%",
+    "postCounts": {
+      "visible": false,
+      "likes": "3000",
+      "replies": "2000",
+      "shares": "1000"
+    },
+    "primaryBackground": "#fc4a1a",
+    "secondaryBackground": "#f7b733",
+    "imageBackground": "/images/backgrounds/background11.png",
+    "backgroundImageOpacity": [0.2],
+    "backgroundType": "linearGradient",
+    "cardCorners": "rounded",
+    "primaryColor": "#000000",
+    "secondaryColor": "#000000",
+    "fontSize": {
+      "headingSize": "small",
+      "contentSize": "medium"
+    },
+    "primaryFontFamily": "'Abel', sans-serif",
+    "primaryFontWeight": "600",
+    "secondaryFontFamily": "'Abel', sans-serif",
+    "secondaryFontWeight": "700",
+    "alignment": "left"
+  },
+  {
+    "socialMedia": ["instagram", "facebook", "twitter"],
+    "postContent": "Every single industry is going through a major business model technology oriented disruption. \n\nERIENCE SOLUTIONS",
+    "postCounts": {
+      "visible": false,
+      "likes": "3000",
+      "replies": "2000",
+      "shares": "1000"
+    },
+    "primaryBackground": "#141e30",
+    "secondaryBackground": "#243b55",
+    "imageBackground": "/images/backgrounds/background10.png",
+    "backgroundImageOpacity": [0.2],
+    "backgroundType": "linearGradient",
+    "cardCorners": "rounded",
+    "primaryColor": "#000000",
+    "secondaryColor": "#000000",
+    "fontSize": {
+      "headingSize": "small",
+      "contentSize": "medium"
+    },
+    "primaryFontFamily": "'Abel', sans-serif",
+    "primaryFontWeight": "400",
+    "secondaryFontFamily": "'Abel', sans-serif",
     "secondaryFontWeight": "700",
     "alignment": "center"
   }

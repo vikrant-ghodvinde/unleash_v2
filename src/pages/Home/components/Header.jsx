@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative py-20">
       <div className="container">
@@ -10,18 +12,11 @@ const Header = () => {
               <span className="relative before:absolute before:w-full before:h-1 before:top-full before:left-1/2 before:-translate-x-1/2 before:bg-primary-gradient before:rounded-[100%]">
                 Unleash
               </span>{" "}
-              Your Creativity: Effortless Design, Unforgettable Posts
+              {t("LHeaderH1")}
             </h1>
-            <p className="text-sm md:text-lg mb-8">
-              The revolutionary tool 🚀 that transforms your ideas 💡 into
-              unique and captivating social media graphics 🎨 with just a few
-              clicks. Designed for creators who value innovation 🔍 and time ⏰,
-              Unleash empowers you to stand out effortlessly ✨. Elevate your
-              social media presence today 📆 and make every post a masterpiece
-              🖼.
-            </p>
+            <p className="text-sm md:text-lg mb-8">{t("LHeaderP")}</p>
             <Link to="/editor" className="btn btn-primary">
-              Launch Unleash
+              {t("Launch")} Unleash
             </Link>
           </div>
         </div>

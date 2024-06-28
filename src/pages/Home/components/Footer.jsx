@@ -1,7 +1,9 @@
 import { LinkedInIcon, TwitterIcon } from "@/icons";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="pt-16 pb-8">
       <div className="container">
@@ -14,7 +16,7 @@ const Footer = () => {
         </div>
         <div className="relative pt-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-            <p>&copy; {new Date().getFullYear()} Unleash by Erience.</p>
+            <p>&copy; {new Date().getFullYear()} Unleash {t("ByErience")}.</p>
             <div className="flex items-center gap-3">
               <Link
                 to="https://twitter.com/erienceINT"
@@ -36,7 +38,7 @@ const Footer = () => {
           </div>
           <div className="relative pt-8 text-center">
             <p>
-              Made with ❤️ from{" "}
+            {t("MadeWith")}{" "}
               <Link
                 to="https://erience.co/"
                 target="_blank"

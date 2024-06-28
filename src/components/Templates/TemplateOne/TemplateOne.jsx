@@ -98,8 +98,8 @@ const TemplateOne = () => {
             ))}
           </div>
         </div>
-        <div
-          className="relative w-full outline-none"
+        <pre
+          className="relative w-full outline-none text-wrap"
           style={{
             fontSize: isDesktop
               ? contentSizeDesktop(contentSize)
@@ -111,7 +111,7 @@ const TemplateOne = () => {
           }}
         >
           {postContent}
-        </div>
+        </pre>
         {timeStamp.visible && (
           <div className="relative w-full">
             <p

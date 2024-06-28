@@ -29,6 +29,7 @@ import {
   AlignLeft,
   AlignRight,
   ColorFilter,
+  NavArrowDown,
   Shuffle,
 } from "iconoir-react";
 
@@ -162,4 +163,8 @@ export const BardIcon = (props) => {
 
 export const DashboardIcon = (props) => {
   return <RiDashboardLine height={props.width} {...props} />;
+};
+
+export const DropDownIcon = (props) => {
+  return <NavArrowDown height={props.width} {...props} />;
 };

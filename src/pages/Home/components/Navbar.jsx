@@ -1,7 +1,10 @@
+import LanguageTranslator from "@/components/LanguageTranslator/LanguageTranslator";
 import { DashboardIcon } from "@/icons";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   return (
     <header className="relative border-b border-b-white/20 z-50">
       <div className="container">
@@ -16,12 +19,13 @@ const Navbar = () => {
               Unleash
             </span>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
+            <LanguageTranslator />
             <Link to="/editor" className="btn btn-primary">
-              <span title="Launch App" className="inline-flex sm:hidden">
+              <span title={`${t("Launch")} Unleash`} className="inline-flex sm:hidden">
                 <DashboardIcon />
               </span>
-              <span className="hidden sm:inline-flex">Launch Unleash</span>
+              <span className="hidden sm:inline-flex">{t("Launch")} Unleash</span>
             </Link>
           </div>
         </div>
