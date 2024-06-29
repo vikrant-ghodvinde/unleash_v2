@@ -1,4 +1,4 @@
-const StyledContent = ({ sentence, color, fontWeight }) => {
+const StyledContent = ({ sentence, color, fontWeight, fontFamily }) => {
   const parseSentence = (sentence) => {
     const parts = sentence.split(/(<\/?[bB]>)/);
     let sentenceParts = [];
@@ -16,6 +16,7 @@ const StyledContent = ({ sentence, color, fontWeight }) => {
               key={index}
               style={{
                 color: color,
+                fontFamily: fontFamily,
                 fontWeight: fontWeight,
               }}
             >

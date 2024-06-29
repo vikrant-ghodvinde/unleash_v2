@@ -190,7 +190,7 @@
   },
   {
     "socialMedia": ["instagram", "facebook", "twitter"],
-    "postContent": "create and Download beautiful images for Social Media posts with Unleash \n\n<c>#unleash #erience_solutions</c>",
+    "postContent": "create and Download beautiful images for Social Media posts with Unleash \n\n<B>#unleash #erience_solutions</B>",
     "postCounts": {
       "visible": true,
       "likes": "3000",
@@ -204,7 +204,8 @@
     "backgroundType": "radialGradient",
     "cardCorners": "rounded",
     "primaryColor": "#000000",
-    "secondaryColor": "#006aff",
+    "secondaryColor": "#000000",
+    "highlightColor": "#006aff",
     "fontSize": {
       "headingSize": "small",
       "contentSize": "small"
@@ -213,6 +214,8 @@
     "primaryFontWeight": "700",
     "secondaryFontFamily": "'Abel', sans-serif",
     "secondaryFontWeight": "400",
+    "highlightFontFamily": "'Abel', sans-serif",
+    "highlightFontWeight": "400",
     "alignment": "left"
   }
 ]

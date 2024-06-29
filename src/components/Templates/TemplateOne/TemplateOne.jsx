@@ -27,8 +27,10 @@ const TemplateOne = () => {
     primaryFontWeight,
     secondaryFontFamily,
     secondaryFontWeight,
+    highlightFontFamily,
+    highlightFontWeight,
   } = useSelector((state) => state.fontStyle);
-  const { primaryColor, secondaryColor } = useSelector((state) => state.colors);
+  const { primaryColor, secondaryColor, highlightColor } = useSelector((state) => state.colors);
   const { corners } = useSelector((state) => state.cardCorners);
 
   const getUserImage = useSelector((state) => state.auth.userImage);
@@ -67,7 +69,7 @@ const TemplateOne = () => {
                 style={{
                   fontFamily: primaryFontFamily,
                   fontWeight: primaryFontWeight,
-                  color: primaryColor
+                  color: primaryColor,
                 }}
               >
                 {profileName.text ? profileName.text : getProfileName}
@@ -80,7 +82,7 @@ const TemplateOne = () => {
                   className="text-[8px] sm:text-[10px]"
                   style={{
                     fontFamily: primaryFontFamily,
-                    color: primaryColor
+                    color: primaryColor,
                   }}
                 >
                   {userName.text ? userName.text : getProfileName.split(" ")[0]}
@@ -114,8 +116,9 @@ const TemplateOne = () => {
           {/* {postContent} */}
           <StyledContent
             sentence={postContent}
-            color={secondaryColor}
-            fontWeight={secondaryFontWeight}
+            color={highlightColor}
+            fontFamily={highlightFontFamily}
+            fontWeight={highlightFontWeight}
           />
         </pre>
         {timeStamp.visible && (

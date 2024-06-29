@@ -15,6 +15,7 @@ import {
   RiInstagramLine,
   RiLinkedinFill,
   RiLogoutCircleRLine,
+  RiQuillPenLine,
   RiRoundedCorner,
   RiSquareLine,
   RiText,
@@ -172,4 +173,8 @@ export const DropDownIcon = (props) => {
 
 export const CodeIcon = (props) => {
   return <RiCodeLine height={props.width} {...props} />;
+};
+
+export const MarkPenIcon = (props) => {
+  return <RiQuillPenLine height={props.width} {...props} />;
 };
