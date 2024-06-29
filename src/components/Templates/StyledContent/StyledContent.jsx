@@ -1,13 +1,13 @@
-const StyledContent = ({ sentence, color, fontWeight, fontFamily }) => {
+const StyledContent = ({ sentence, color, fontWeight }) => {
   const parseSentence = (sentence) => {
-    const parts = sentence.split(/(<\/?[cb]>)/);
+    const parts = sentence.split(/(<\/?[bB]>)/);
     let sentenceParts = [];
     let cTagOpened = false;
 
     parts.forEach((part, index) => {
-      if (part === "<c>") {
+      if (part === "<b>" || part === "<B>") {
         cTagOpened = true;
-      } else if (part === "</c>") {
+      } else if (part === "</b>" || part === "</B>") {
         cTagOpened = false;
       } else if (part.trim() !== "") {
         if (cTagOpened) {
@@ -17,7 +17,6 @@ const StyledContent = ({ sentence, color, fontWeight, fontFamily }) => {
               style={{
                 color: color,
                 fontWeight: fontWeight,
-                fontFamily: fontFamily,
               }}
             >
               {part}

@@ -1,4 +1,3 @@
-import { CodeIcon } from "@/icons";
 import { GetContext } from "@/libs/context/context";
 import {
   Tooltip,
@@ -15,7 +14,7 @@ const PostContent = () => {
     const startPos = inputElement.selectionStart;
     const endPos = inputElement.selectionEnd;
     const selectedText = postContent.substring(startPos, endPos);
-    const newText = `<c>${selectedText}</c>`;
+    const newText = `<B>${selectedText}</B>`;
 
     const updatedText =
       postContent.substring(0, startPos) +
@@ -36,10 +35,10 @@ const PostContent = () => {
             <TooltipTrigger asChild>
               <span
                 role="button"
-                className="w-7 h-7 inline-flex items-center justify-center border-r border-r-zinc-700"
+                className="w-7 h-7 font-bold inline-flex items-center justify-center border-r border-r-zinc-700"
                 onClick={handleColorInsertion}
               >
-                <CodeIcon width={12} />
+                B
               </span>
             </TooltipTrigger>
             <TooltipContent>Insert Highlight</TooltipContent>

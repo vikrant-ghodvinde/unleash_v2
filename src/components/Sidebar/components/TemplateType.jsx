@@ -26,23 +26,23 @@ const TemplateType = () => {
         <SelectValue placeholder="Template size" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="linedIn(4:5)" className="text-xs">
-          LinkedIn (4:5) - Recommended
-        </SelectItem>
         <SelectItem
           value="linedIn(1:1)"
-          className="text-xs border-b border-b-zinc-900"
+          className="text-xs"
         >
-          LinkedIn (1:1)
+          LinkedIn (1:1) - Recommended
         </SelectItem>
-        <SelectItem value="instagram(4:5)" className="text-xs">
-          Instagram (4:5) - Recommended
+        <SelectItem value="linedIn(4:5)" className="text-xs border-b border-b-zinc-900">
+          LinkedIn (4:5)
         </SelectItem>
         <SelectItem
           value="instagram(1:1)"
-          className="text-xs border-b border-b-zinc-900"
+          className="text-xs"
         >
-          Instagram (1:1)
+          Instagram (1:1) - Recommended
+        </SelectItem>
+        <SelectItem value="instagram(4:5)" className="text-xs border-b border-b-zinc-900">
+          Instagram (4:5)
         </SelectItem>
         <SelectItem value="instagram(9:16)" className="text-xs">
           Instagram Stories (9:16)

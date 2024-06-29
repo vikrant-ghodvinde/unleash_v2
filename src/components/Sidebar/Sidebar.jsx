@@ -2,6 +2,7 @@
 import { BardIcon } from "@/icons";
 import PostContent from "./components/PostContent";
 import TemplateType from "./components/TemplateType";
+import RandomTemplate from "./components/RandomTemplate";
 
 const Sidebar = ({ setOpen }) => {
   return (
@@ -17,10 +18,10 @@ const Sidebar = ({ setOpen }) => {
                 <button
                   type="button"
                   className="inline-flex items-center justify-center gap-2 py-3 px-6 text-xs bg-zinc-800 hover:bg-zinc-900 w-full rounded-md transition-all duration-300"
-                  onClick={() => setOpen(true)}
+                  // onClick={() => setOpen(true)}
                 >
                   <BardIcon width={16} />
-                  Generate Template
+                  Randomizer Template
                 </button>
               </div>
             </div>
@@ -31,6 +32,7 @@ const Sidebar = ({ setOpen }) => {
             <div className="grid grid-cols-1 gap-y-5">
               <div className="flex items-center justify-between">
                 <h6 className="text-sm font-bold">Template Settings</h6>
+                <RandomTemplate />
               </div>
               <div className="relative">
                 <TemplateType />

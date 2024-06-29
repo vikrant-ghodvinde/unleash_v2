@@ -96,10 +96,10 @@ const RandomTemplate = () => {
       <TooltipTrigger>
         <span
           role="button"
-          className="w-10 h-10 inline-flex items-center justify-center text-white text-xs bg-zinc-800 hover:bg-zinc-900"
+          className="w-10 h-10 inline-flex items-center justify-center text-white text-xs"
           onClick={handleRandomTemplates}
         >
-          <ShuffleIcon width={16} strokeWidth={2} />
+          <ShuffleIcon width={14} strokeWidth={2} />
         </span>
       </TooltipTrigger>
       <TooltipContent>Generate Template</TooltipContent>

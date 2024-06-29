@@ -21,9 +21,9 @@
       "contentSize": "small"
     },
     "primaryFontFamily": "'Playfair Display', serif",
-    "primaryFontWeight": "400",
+    "primaryFontWeight": "700",
     "secondaryFontFamily": "'PT Serif', serif",
-    "secondaryFontWeight": "700",
+    "secondaryFontWeight": "400",
     "alignment": "justify"
   },
   {
@@ -48,9 +48,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Rokkitt', slab-serif",
-    "primaryFontWeight": "400",
+    "primaryFontWeight": "700",
     "secondaryFontFamily": "'Bitter', serif",
-    "secondaryFontWeight": "700",
+    "secondaryFontWeight": "400",
     "alignment": "center"
   },
   {
@@ -75,9 +75,9 @@
       "contentSize": "small"
     },
     "primaryFontFamily": "'Oswald', sans-serif",
-    "primaryFontWeight": "400",
+    "primaryFontWeight": "700",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "700",
+    "secondaryFontWeight": "400",
     "alignment": "justify"
   },
   {
@@ -102,9 +102,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Lora', serif",
-    "primaryFontWeight": "400",
+    "primaryFontWeight": "700",
     "secondaryFontFamily": "'Lora', serif",
-    "secondaryFontWeight": "700",
+    "secondaryFontWeight": "400",
     "alignment": "left"
   },
   {
@@ -129,9 +129,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Abel', sans-serif",
-    "primaryFontWeight": "400",
+    "primaryFontWeight": "700",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "700",
+    "secondaryFontWeight": "400",
     "alignment": "left"
   },
   {
@@ -156,9 +156,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Abel', sans-serif",
-    "primaryFontWeight": "600",
+    "primaryFontWeight": "700",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "700",
+    "secondaryFontWeight": "600",
     "alignment": "left"
   },
   {
@@ -183,9 +183,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Abel', sans-serif",
-    "primaryFontWeight": "400",
+    "primaryFontWeight": "700",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "700",
+    "secondaryFontWeight": "400",
     "alignment": "center"
   },
   {
@@ -210,7 +210,7 @@
       "contentSize": "small"
     },
     "primaryFontFamily": "'Abel', sans-serif",
-    "primaryFontWeight": "400",
+    "primaryFontWeight": "700",
     "secondaryFontFamily": "'Abel', sans-serif",
     "secondaryFontWeight": "400",
     "alignment": "left"

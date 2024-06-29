@@ -4,9 +4,9 @@ const fontStyleSlice = createSlice({
   name: "fontStyle",
   initialState: {
     primaryFontFamily: "'Playfair Display', serif",
-    primaryFontWeight: "400",
+    primaryFontWeight: "700",
     secondaryFontFamily: "'PT Serif', serif",
-    secondaryFontWeight: "700",
+    secondaryFontWeight: "400",
   },
   reducers: {
     setPrimaryFontFamily: (state, action) => {

@@ -2,7 +2,7 @@
 import { useSelector } from "react-redux";
 import Sidebar from "../Sidebar/Sidebar";
 import AppHeader from "../Header/AppHeader";
-import { SettingIcon } from "@/icons";
+import { BardIcon, SettingIcon } from "@/icons";
 import { useState } from "react";
 
 const AppWrapper = ({ children, setOpen }) => {
@@ -39,10 +39,10 @@ const AppWrapper = ({ children, setOpen }) => {
           <button
             type="button"
             className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-6 text-xs bg-zinc-800 text-white"
-            onClick={() => setOpen(true)}
+            // onClick={() => setOpen(true)}
           >
-            <SettingIcon width={16} />
-            AI Templates
+            <BardIcon width={16} />
+            Randomizer Template
           </button>
         </div>
         {children}

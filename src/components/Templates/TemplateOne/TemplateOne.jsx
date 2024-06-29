@@ -47,7 +47,7 @@ const TemplateOne = () => {
         <div className="relative w-full flex items-center justify-between gap-x-2">
           <div className="flex items-center gap-x-2">
             {userImage.visible && (
-              <div className="relative w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gray-800 overflow-hidden">
+              <div className="relative w-8 min-w-8 sm:w-10 sm:min-w-10 h-8 min-h-8 sm:h-10 sm:min-h-10 rounded-full bg-gray-800 overflow-hidden">
                 {getUserImage || userImage.image ? (
                   <img
                     src={userImage.image ? userImage.image : getUserImage}
@@ -61,11 +61,13 @@ const TemplateOne = () => {
                 )}
               </div>
             )}
-            <div className="relative">
+            <div className="relative max-w-60 text-wrap break-all">
               <h6
                 className="text-[10px] sm:text-xs flex items-center font-bold gap-x-1"
                 style={{
                   fontFamily: primaryFontFamily,
+                  fontWeight: primaryFontWeight,
+                  color: primaryColor
                 }}
               >
                 {profileName.text ? profileName.text : getProfileName}
@@ -78,6 +80,7 @@ const TemplateOne = () => {
                   className="text-[8px] sm:text-[10px]"
                   style={{
                     fontFamily: primaryFontFamily,
+                    color: primaryColor
                   }}
                 >
                   {userName.text ? userName.text : getProfileName.split(" ")[0]}
@@ -103,9 +106,9 @@ const TemplateOne = () => {
               ? contentSizeDesktop(contentSize)
               : contentSizeMobile(contentSize),
             textAlign: textAlignment(alignment),
-            fontFamily: primaryFontFamily,
-            fontWeight: primaryFontWeight,
-            color: primaryColor,
+            fontFamily: secondaryFontFamily,
+            fontWeight: secondaryFontWeight,
+            color: secondaryColor,
           }}
         >
           {/* {postContent} */}
@@ -113,7 +116,6 @@ const TemplateOne = () => {
             sentence={postContent}
             color={secondaryColor}
             fontWeight={secondaryFontWeight}
-            fontFamily={secondaryFontFamily}
           />
         </pre>
         {timeStamp.visible && (
