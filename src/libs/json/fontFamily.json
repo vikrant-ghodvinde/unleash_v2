@@ -14,5 +14,27 @@
   { "name": "Oswald", "font": "'Oswald', sans-serif" },
   { "name": "Roboto Flex", "font": "'Roboto Flex', sans-serif" },
   { "name": "Abel", "font": "'Abel', sans-serif" },
-  { "name": "Quicksand", "font": "'Quicksand', sans-serif" }
+  { "name": "Quicksand", "font": "'Quicksand', sans-serif" },
+  { "name": "DM Serif Display", "font": "'DM Serif Display', serif" },
+  { "name": "DM Sans", "font": "'DM Sans', sans-serif" },
+  {
+    "name": "Big Shoulders Display",
+    "font": "'Big Shoulders Display', sans-serif"
+  },
+  { "name": "Inter", "font": "'Inter', sans-serif" },
+  { "name": "Stint Ultra Expanded", "font": "'Stint Ultra Expanded', serif" },
+  { "name": "Pontano Sans", "font": "'Pontano Sans', sans-serif" },
+  { "name": "Cantarell", "font": "'Cantarell', sans-serif" },
+  { "name": "Syne", "font": "'Syne', sans-serif" },
+  { "name": "Yellowtail", "font": "'Yellowtail', cursive" },
+  { "name": "Roboto Mono", "font": "'Roboto Mono', monospace" },
+  { "name": "League Spartan", "font": "'League Spartan', sans-serif" },
+  { "name": "Teko", "font": "'Teko', sans-serif" },
+  { "name": "Philosopher", "font": "'Philosopher', sans-serif" },
+  { "name": "Mulish", "font": "'Mulish', sans-serif" },
+  { "name": "Archivo", "font": "'Archivo', sans-serif" },
+  { "name": "Della Respira", "font": "'Della Respira', serif" },
+  { "name": "League Gothic", "font": "'League Gothic', sans-serif" },
+  { "name": "Space Mono", "font": "'Space Mono', monospace" },
+  { "name": "Bricolage Grotesque", "font": "'Bricolage Grotesque', monospace" }
 ]

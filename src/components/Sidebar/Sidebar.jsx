@@ -3,6 +3,7 @@ import { BardIcon } from "@/icons";
 import PostContent from "./components/PostContent";
 import TemplateType from "./components/TemplateType";
 import RandomTemplate from "./components/RandomTemplate";
+import PostCount from "./components/PostCount";
 
 const Sidebar = ({ setOpen }) => {
   return (
@@ -18,7 +19,7 @@ const Sidebar = ({ setOpen }) => {
                 <button
                   type="button"
                   className="inline-flex items-center justify-center gap-2 py-3 px-6 text-xs bg-zinc-800 hover:bg-zinc-900 w-full rounded-md transition-all duration-300"
-                  // onClick={() => setOpen(true)}
+                  onClick={() => setOpen(true)}
                 >
                   <BardIcon width={16} />
                   Randomizer Template
@@ -39,6 +40,9 @@ const Sidebar = ({ setOpen }) => {
               </div>
               <div className="relative">
                 <PostContent />
+              </div>
+              <div className="relative">
+                <PostCount />
               </div>
             </div>
           </div>
