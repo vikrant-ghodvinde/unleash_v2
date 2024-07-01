@@ -9,6 +9,7 @@ import {
 } from "@/ui/shadcn/components/ui/dialog";
 import { Switch } from "@/ui/shadcn/components/ui/switch";
 import { useState } from "react";
+import TemplateOne from "./Templates/TemplateOne";
 
 const AITemplates = ({ open, setOpen }) => {
   const { userImage, setUserImage } = useState("");
@@ -32,12 +33,28 @@ const AITemplates = ({ open, setOpen }) => {
             accusantium.
           </DialogDescription>
         </DialogHeader>
-        <div className="relative w-full py-10 px-0 md:px-4">
-          <div className="flex flex-col xl:flex-row items-center gap-5">
-            <div className="relative flex-auto">
-              <div className="w-full">
-                <div className="grid grid-cols-1 gap-y-4">
-                  <div className="relative col-span-1">
+        <div className="relative w-full max-h-[calc(100vh-150px)] py-10 px-0 md:px-4 overflow-y-auto scrollbar-y">
+          <div className="w-full flex flex-col xl:flex-row items-center gap-5">
+            <div className="relative w-full xl:w-auto flex-auto">
+              <div className="w-full px-4">
+                <div className="w-full grid grid-cols-12 gap-y-4 gap-x-5">
+                  <div className="relative col-span-12">
+                    <label className="flex items-center gap-2 text-white text-sm mb-2">
+                      Title
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full h-10 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md"
+                      placeholder="Enter user Name"
+                    />
+                  </div>
+                  <div className="relative col-span-12">
+                    <label className="flex items-center gap-2 text-white text-sm mb-2">
+                      Description
+                    </label>
+                    <textarea className="w-full h-20 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md resize-none scrollbar-y" />
+                  </div>
+                  <div className="relative col-span-12">
                     <label className="flex items-center gap-2 text-white text-sm mb-2">
                       <Switch />
                       Company Logo
@@ -54,27 +71,39 @@ const AITemplates = ({ open, setOpen }) => {
                       </span>
                     </div>
                   </div>
-                  <div className="relative col-span-1">
+                  <div className="relative col-span-12 md:col-span-6">
                     <label className="flex items-center gap-2 text-white text-sm mb-2">
                       Company Name
                     </label>
                     <input
                       type="text"
                       className="w-full h-10 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md"
-                      placeholder="Enter user Name"
+                      placeholder="Enter Company Name"
                     />
                   </div>
-                  <div className="relative col-span-1">
+                  <div className="relative col-span-12 md:col-span-6">
                     <label className="flex items-center gap-2 text-white text-sm mb-2">
-                      Content
+                      Contact
                     </label>
-                    <textarea className="w-full h-28 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md resize-none scrollbar-y" />
+                    <input
+                      type="number"
+                      className="w-full h-10 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md"
+                      placeholder="Enter Phone"
+                    />
+                  </div>
+                  <div className="relative col-span-12">
+                    <label className="flex items-center gap-2 text-white text-sm mb-2">
+                      Address
+                    </label>
+                    <textarea className="w-full h-20 p-2 text-xs text-white border border-zinc-700 bg-transparent outline-none rounded-md resize-none scrollbar-y" />
                   </div>
                 </div>
               </div>
             </div>
             <div className="relative w-auto p-5 flex items-center justify-center bg-dots rounded-2xl overflow-hidden">
-              <div className="shrink-0 relative group w-[18rem] md:w-[27rem] aspect-square bg-white p-5 sm:p-10 z-10"></div>
+              <div className=" relative group w-[18rem] md:w-[27rem] aspect-square bg-white z-10">
+                <TemplateOne />
+              </div>
             </div>
           </div>
         </div>
