@@ -1,13 +1,10 @@
 import ColorPicker from "@/components/ColorPicker/ColorPicker";
-import { FontsIcon, MarkPenIcon } from "@/icons";
+import { FontsIcon } from "@/icons";
 import {
-  setHighlightColor,
   setPrimaryColor,
   setSecondaryColor,
 } from "@/libs/redux/reducers/colorsReducer";
 import {
-  setHighlightFontFamily,
-  setHighlightFontWeight,
   setPrimaryFontFamily,
   setPrimaryFontWeight,
   setSecondaryFontFamily,
@@ -40,13 +37,9 @@ const Fonts = () => {
     primaryFontWeight,
     secondaryFontFamily,
     secondaryFontWeight,
-    highlightFontFamily,
-    highlightFontWeight,
   } = useSelector((state) => state.fontStyle);
 
-  const { primaryColor, secondaryColor, highlightColor } = useSelector(
-    (state) => state.colors
-  );
+  const { primaryColor, secondaryColor } = useSelector((state) => state.colors);
   return (
     <Popover>
       <Tooltip>
@@ -67,7 +60,7 @@ const Fonts = () => {
           <div className="relative col-span-12 p-1">
             <div className="w-full h-10 flex items-center justify-between gap-1">
               <div className="w-10 h-10 inline-flex items-center justify-center">
-                H
+                q
               </div>
               <div className="relative">
                 <Select
@@ -163,7 +156,7 @@ const Fonts = () => {
           <div className="relative col-span-12 p-1">
             <div className="w-full h-10 flex items-center justify-between gap-1">
               <div className="w-10 h-10 inline-flex items-center justify-center">
-                q
+                H
               </div>
               <div className="relative">
                 <Select
@@ -246,102 +239,6 @@ const Fonts = () => {
                         dispatch(
                           setSecondaryColor({
                             secondaryColor: color,
-                          })
-                        )
-                      }
-                    />
-                  </PopoverContent>
-                </Popover>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-12 p-1">
-            <div className="w-full h-10 flex items-center justify-between gap-1">
-              <div className="w-10 h-10 inline-flex items-center justify-center">
-                <MarkPenIcon width={16} />
-              </div>
-              <div className="relative">
-                <Select
-                  value={highlightFontFamily}
-                  onValueChange={(font) =>
-                    dispatch(
-                      setHighlightFontFamily({
-                        highlightFontFamily: font,
-                      })
-                    )
-                  }
-                >
-                  <SelectTrigger className="text-xs w-32">
-                    <SelectValue placeholder="Select Font" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {fontFamilies?.map((font) => (
-                      <SelectItem
-                        key={font?.name}
-                        value={font.font}
-                        className="text-xs"
-                      >
-                        {font?.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="relative">
-                <Select
-                  value={highlightFontWeight}
-                  onValueChange={(weight) =>
-                    dispatch(
-                      setHighlightFontWeight({
-                        highlightFontWeight: weight,
-                      })
-                    )
-                  }
-                >
-                  <SelectTrigger className="text-xs w-28">
-                    <SelectValue placeholder="Select Font Weight" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="300" className="text-xs">
-                      Light
-                    </SelectItem>
-                    <SelectItem value="400" className="text-xs">
-                      Regular
-                    </SelectItem>
-                    <SelectItem value="500" className="text-xs">
-                      Medium
-                    </SelectItem>
-                    <SelectItem value="600" className="text-xs">
-                      Semi Bold
-                    </SelectItem>
-                    <SelectItem value="700" className="text-xs">
-                      Bold
-                    </SelectItem>
-                    <SelectItem value="800" className="text-xs">
-                      Extra Bold
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="flex items-center justify-center">
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <button
-                      type="button"
-                      className="w-10 h-10 rounded-md bg-slate-500"
-                      style={{
-                        background: highlightColor,
-                      }}
-                    ></button>
-                  </PopoverTrigger>
-                  <PopoverContent>
-                    <ColorPicker
-                      color={highlightColor}
-                      setColor={(color) =>
-                        dispatch(
-                          setHighlightColor({
-                            highlightColor: color,
                           })
                         )
                       }

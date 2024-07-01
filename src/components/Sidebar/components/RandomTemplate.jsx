@@ -9,14 +9,11 @@ import {
 } from "@/libs/redux/reducers/backgroundsReducer";
 import { setCorners } from "@/libs/redux/reducers/cardCornersReducer";
 import {
-  setHighlightColor,
   setPrimaryColor,
   setSecondaryColor,
 } from "@/libs/redux/reducers/colorsReducer";
 import { setFontSize } from "@/libs/redux/reducers/fontSizeReducer";
 import {
-  setHighlightFontFamily,
-  setHighlightFontWeight,
   setPrimaryFontFamily,
   setPrimaryFontWeight,
   setSecondaryFontFamily,
@@ -68,7 +65,6 @@ const RandomTemplate = () => {
     dispatch(setCorners({ corners: template.cardCorners }));
     dispatch(setPrimaryColor({ primaryColor: template.primaryColor }));
     dispatch(setSecondaryColor({ secondaryColor: template.secondaryColor }));
-    dispatch(setHighlightColor({ highlightColor: template.highlightColor }));
     dispatch(
       setFontSize({
         headingSize: template.fontSize.headingSize,
@@ -89,16 +85,6 @@ const RandomTemplate = () => {
     dispatch(
       setSecondaryFontWeight({
         secondaryFontWeight: template.secondaryFontWeight,
-      })
-    );
-    dispatch(
-      setHighlightFontFamily({
-        highlightFontFamily: template.highlightFontFamily,
-      })
-    );
-    dispatch(
-      setHighlightFontWeight({
-        highlightFontWeight: template.highlightFontWeight,
       })
     );
     dispatch(setAlignment({ alignment: template.alignment }));

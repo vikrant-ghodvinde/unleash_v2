@@ -21,9 +21,9 @@
       "contentSize": "small"
     },
     "primaryFontFamily": "'Playfair Display', serif",
-    "primaryFontWeight": "700",
+    "primaryFontWeight": "400",
     "secondaryFontFamily": "'PT Serif', serif",
-    "secondaryFontWeight": "400",
+    "secondaryFontWeight": "700",
     "alignment": "justify"
   },
   {
@@ -48,9 +48,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Rokkitt', slab-serif",
-    "primaryFontWeight": "700",
+    "primaryFontWeight": "400",
     "secondaryFontFamily": "'Bitter', serif",
-    "secondaryFontWeight": "400",
+    "secondaryFontWeight": "700",
     "alignment": "center"
   },
   {
@@ -75,9 +75,9 @@
       "contentSize": "small"
     },
     "primaryFontFamily": "'Oswald', sans-serif",
-    "primaryFontWeight": "700",
+    "primaryFontWeight": "400",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "400",
+    "secondaryFontWeight": "700",
     "alignment": "justify"
   },
   {
@@ -102,9 +102,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Lora', serif",
-    "primaryFontWeight": "700",
+    "primaryFontWeight": "400",
     "secondaryFontFamily": "'Lora', serif",
-    "secondaryFontWeight": "400",
+    "secondaryFontWeight": "700",
     "alignment": "left"
   },
   {
@@ -129,9 +129,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Abel', sans-serif",
-    "primaryFontWeight": "700",
+    "primaryFontWeight": "400",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "400",
+    "secondaryFontWeight": "700",
     "alignment": "left"
   },
   {
@@ -156,9 +156,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Abel', sans-serif",
-    "primaryFontWeight": "700",
+    "primaryFontWeight": "400",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "600",
+    "secondaryFontWeight": "700",
     "alignment": "left"
   },
   {
@@ -183,9 +183,9 @@
       "contentSize": "medium"
     },
     "primaryFontFamily": "'Abel', sans-serif",
-    "primaryFontWeight": "700",
+    "primaryFontWeight": "400",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "400",
+    "secondaryFontWeight": "700",
     "alignment": "center"
   },
   {
@@ -205,17 +205,14 @@
     "cardCorners": "rounded",
     "primaryColor": "#000000",
     "secondaryColor": "#000000",
-    "highlightColor": "#006aff",
     "fontSize": {
       "headingSize": "small",
       "contentSize": "small"
     },
     "primaryFontFamily": "'Abel', sans-serif",
-    "primaryFontWeight": "700",
+    "primaryFontWeight": "400",
     "secondaryFontFamily": "'Abel', sans-serif",
-    "secondaryFontWeight": "400",
-    "highlightFontFamily": "'Abel', sans-serif",
-    "highlightFontWeight": "400",
+    "secondaryFontWeight": "700",
     "alignment": "left"
   }
 ]

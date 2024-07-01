@@ -27,10 +27,8 @@ const TemplateOne = () => {
     primaryFontWeight,
     secondaryFontFamily,
     secondaryFontWeight,
-    highlightFontFamily,
-    highlightFontWeight,
   } = useSelector((state) => state.fontStyle);
-  const { primaryColor, secondaryColor, highlightColor } = useSelector((state) => state.colors);
+  const { primaryColor, secondaryColor } = useSelector((state) => state.colors);
   const { corners } = useSelector((state) => state.cardCorners);
 
   const getUserImage = useSelector((state) => state.auth.userImage);
@@ -64,27 +62,14 @@ const TemplateOne = () => {
               </div>
             )}
             <div className="relative max-w-60 text-wrap break-all">
-              <h6
-                className="text-[10px] sm:text-xs flex items-center font-bold gap-x-1"
-                style={{
-                  fontFamily: primaryFontFamily,
-                  fontWeight: primaryFontWeight,
-                  color: primaryColor,
-                }}
-              >
+              <h6 className="text-[10px] sm:text-xs flex items-center font-bold gap-x-1 font-karla">
                 {profileName.text ? profileName.text : getProfileName}
                 {profileName.verified && (
                   <VerifiedIcon width={14} height={14} color="#1EA1F3" />
                 )}
               </h6>
               {userName.visible && (
-                <p
-                  className="text-[8px] sm:text-[10px]"
-                  style={{
-                    fontFamily: primaryFontFamily,
-                    color: primaryColor,
-                  }}
-                >
+                <p className="text-[8px] sm:text-[10px] font-karla font-normal">
                   {userName.text ? userName.text : getProfileName.split(" ")[0]}
                 </p>
               )}
@@ -108,27 +93,22 @@ const TemplateOne = () => {
               ? contentSizeDesktop(contentSize)
               : contentSizeMobile(contentSize),
             textAlign: textAlignment(alignment),
-            fontFamily: secondaryFontFamily,
-            fontWeight: secondaryFontWeight,
-            color: secondaryColor,
+            fontFamily: primaryFontFamily,
+            fontWeight: primaryFontWeight,
+            color: primaryColor,
           }}
         >
           {/* {postContent} */}
           <StyledContent
             sentence={postContent}
-            color={highlightColor}
-            fontFamily={highlightFontFamily}
-            fontWeight={highlightFontWeight}
+            color={secondaryColor}
+            fontFamily={secondaryFontFamily}
+            fontWeight={secondaryFontWeight}
           />
         </pre>
         {timeStamp.visible && (
           <div className="relative w-full">
-            <p
-              className="text-[8px] sm:text-[9px] text-blue-600"
-              style={{
-                fontFamily: primaryFontFamily,
-              }}
-            >
+            <p className="text-[8px] sm:text-[9px] text-blue-600 font-karla">
               {timeStamp.text}
             </p>
           </div>
@@ -136,32 +116,17 @@ const TemplateOne = () => {
         {postCounts.visible && (
           <div className="relative w-full">
             <div className="flex items-center gap-x-3">
-              <div
-                className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5"
-                style={{
-                  fontFamily: primaryFontFamily,
-                }}
-              >
+              <div className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5 font-karla">
                 <HeartIcon width={14} height={14} />
                 <p>{postCountConfiguration(postCounts.likes)}</p>
               </div>
-              <div
-                className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5"
-                style={{
-                  fontFamily: primaryFontFamily,
-                }}
-              >
+              <div className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5 font-karla">
                 <span>
                   <CommentIcon width={14} height={14} />
                 </span>
                 <p>{postCountConfiguration(postCounts.replies)}</p>
               </div>
-              <div
-                className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5"
-                style={{
-                  fontFamily: primaryFontFamily,
-                }}
-              >
+              <div className="text-[10px] sm:text-xs inline-flex items-center gap-x-0.5 font-karla">
                 <ShareIcon width={14} height={14} />
                 <p>{postCountConfiguration(postCounts.shares)}</p>
               </div>

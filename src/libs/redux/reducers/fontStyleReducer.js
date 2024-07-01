@@ -4,11 +4,9 @@ const fontStyleSlice = createSlice({
   name: "fontStyle",
   initialState: {
     primaryFontFamily: "'Playfair Display', serif",
-    primaryFontWeight: "700",
+    primaryFontWeight: "400",
     secondaryFontFamily: "'PT Serif', serif",
-    secondaryFontWeight: "400",
-    highlightFontFamily: "'PT Serif', serif",
-    highlightFontWeight: "400",
+    secondaryFontWeight: "700",
   },
   reducers: {
     setPrimaryFontFamily: (state, action) => {
@@ -23,12 +21,6 @@ const fontStyleSlice = createSlice({
     setSecondaryFontWeight: (state, action) => {
       state.secondaryFontWeight = action.payload.secondaryFontWeight;
     },
-    setHighlightFontFamily: (state, action) => {
-      state.highlightFontFamily = action.payload.highlightFontFamily;
-    },
-    setHighlightFontWeight: (state, action) => {
-      state.highlightFontWeight = action.payload.highlightFontWeight;
-    },
   },
 });
 
@@ -37,7 +29,5 @@ export const {
   setPrimaryFontWeight,
   setSecondaryFontFamily,
   setSecondaryFontWeight,
-  setHighlightFontFamily,
-  setHighlightFontWeight,
 } = fontStyleSlice.actions;
 export default fontStyleSlice.reducer;
